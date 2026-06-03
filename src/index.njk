@@ -879,34 +879,34 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
             <div class="chip">Спанбонд</div>
             <div class="chip">Другое</div>
           </div>
-          <input type="hidden" name="Интересует" id="chip-value" value="Майка">
+          <input type="hidden" name="Product" id="chip-value" value="Майка">
         </div>
 
         <div class="form-row two">
           <div>
             <label>Имя</label>
-            <input type="text" name="Имя" class="form-control" placeholder="Ваше имя" required>
+            <input type="text" name="Name" class="form-control" placeholder="Ваше имя" required>
           </div>
           <div>
             <label>Компания</label>
-            <input type="text" name="Компания" class="form-control" placeholder="ООО / ИП">
+            <input type="text" name="Company" class="form-control" placeholder="ООО / ИП">
           </div>
         </div>
 
         <div class="form-row two">
           <div>
             <label>Телефон*</label>
-            <input type="tel" name="Телефон" class="form-control" placeholder="+998 __ ___ __ __" required>
+            <input type="tel" name="Phone" class="form-control" placeholder="+998 __ ___ __ __" required>
           </div>
           <div>
             <label>Тираж, шт</label>
-            <input type="text" name="Тираж" class="form-control" placeholder="напр. 10 000">
+            <input type="text" name="Quantity" class="form-control" placeholder="напр. 10 000">
           </div>
         </div>
 
         <div class="form-row">
           <label>Комментарий</label>
-          <textarea name="Комментарий" class="form-control" placeholder="Опишите задачу: размер, печать, наличие макета..."></textarea>
+          <textarea name="Comment" class="form-control" placeholder="Опишите задачу: размер, печать, наличие макета..."></textarea>
         </div>
 
         <button type="submit" class="btn btn-accent form-submit">{{ site.header.cta_text }} <span class="arrow">→</span></button>
@@ -1004,7 +1004,7 @@ function updateCalc(){
       if(hidden) hidden.value = type;
       const ta = document.querySelector('textarea.form-control');
       if(ta) ta.value = `Тип: ${type}\nПечать: ${print}\nТираж: ${fmt(qty)} шт\nРазмер: ${size}`;
-      const qtyInput = document.querySelector('input[name="Тираж"]');
+      const qtyInput = document.querySelector('input[name="Quantity"]');
       if(qtyInput) qtyInput.value = fmt(qty);
     };
   }
