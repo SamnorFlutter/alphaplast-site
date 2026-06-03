@@ -1,0 +1,244 @@
+media:
+  - name: assets
+    label: Картинки и документы
+    input: src/assets
+    output: /assets
+
+content:
+  - name: site
+    label: Контент сайта
+    type: file
+    path: src/_data/site.json
+    fields:
+      - name: meta
+        label: SEO (вкладка браузера и поиск)
+        type: object
+        fields:
+          - { name: title, label: Заголовок вкладки, type: string }
+          - { name: description, label: Описание для поисковиков, type: text }
+
+      - name: topbar
+        label: Верхняя строка
+        type: object
+        fields:
+          - { name: email, label: Email, type: string }
+          - { name: address, label: Адрес, type: string }
+          - { name: hours, label: Часы работы, type: string }
+
+      - name: header
+        label: Шапка
+        type: object
+        fields:
+          - { name: phone_display, label: Телефон (как показывать), type: string }
+          - { name: phone_link, label: Телефон для ссылки (без пробелов), type: string }
+          - { name: cta_text, label: Текст кнопки, type: string }
+
+      - name: hero
+        label: Главный экран
+        type: object
+        fields:
+          - { name: tag, label: Плашка сверху, type: string }
+          - { name: title_line1, label: Заголовок — 1-е слово, type: string }
+          - { name: title_serif, label: Заголовок — курсив, type: string }
+          - { name: title_accent, label: Заголовок — красное слово, type: string }
+          - { name: title_line3, label: Заголовок — последняя строка, type: string }
+          - { name: lead, label: Подзаголовок, type: text }
+          - { name: cta_primary, label: Кнопка 1, type: string }
+          - { name: cta_secondary, label: Кнопка 2, type: string }
+          - { name: rating_title, label: Текст доверия (жирный), type: string }
+          - { name: rating_sub, label: Текст доверия (бренды), type: string }
+          - name: cards
+            label: Плавающие карточки (3 шт)
+            type: object
+            list: true
+            fields:
+              - { name: icon, label: Иконка (эмодзи), type: string }
+              - { name: title, label: Заголовок, type: string }
+              - { name: sub, label: Подпись, type: string }
+
+      - name: stats
+        label: Цифры под главным экраном
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Число, type: string }
+          - { name: plus, label: Приставка (+, + млн...), type: string }
+          - { name: label, label: Подпись, type: string }
+
+      - name: marquee
+        label: Бегущая строка клиентов
+        type: object
+        fields:
+          - { name: label, label: Подпись над строкой, type: string }
+          - { name: clients, label: Бренды, type: string, list: true }
+
+      - name: products
+        label: Каталог продукции
+        type: object
+        fields:
+          - { name: eyebrow, label: Надзаголовок, type: string }
+          - { name: heading, label: Заголовок секции, type: string }
+          - { name: intro, label: Описание секции, type: text }
+          - name: items
+            label: Товары
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Название, type: string }
+              - { name: desc, label: Описание, type: text }
+              - { name: tag, label: Бейдж (Эко, Премиум...), type: string }
+              - { name: label, label: Надпись на пакете, type: string }
+              - { name: price, label: Цена, type: string }
+              - { name: price_sub, label: Подпись к цене, type: string }
+              - { name: color, label: "Цвет фона (c1-c6)", type: string }
+              - { name: shape, label: "Тип пакета (пусто / paper / nonwoven)", type: string }
+
+      - name: benefits
+        label: Преимущества
+        type: object
+        fields:
+          - { name: eyebrow, label: Надзаголовок, type: string }
+          - { name: heading, label: Заголовок секции, type: string }
+          - { name: intro, label: Описание секции, type: text }
+          - name: items
+            label: Карточки преимуществ
+            type: object
+            list: true
+            fields:
+              - { name: num, label: Номер (/ 01), type: string }
+              - { name: icon, label: "Иконка (factory/shield/award/check)", type: string }
+              - { name: title, label: Заголовок, type: string }
+              - { name: desc, label: Описание, type: text }
+
+      - name: configurator
+        label: Конструктор заявки
+        type: object
+        fields:
+          - { name: eyebrow, label: Надзаголовок, type: string }
+          - { name: heading, label: Заголовок секции, type: string }
+          - { name: intro, label: Описание секции, type: text }
+          - { name: note, label: Примечание справа, type: text }
+          - { name: cta, label: Текст кнопки, type: string }
+
+      - name: process
+        label: Как мы работаем
+        type: object
+        fields:
+          - { name: eyebrow, label: Надзаголовок, type: string }
+          - { name: heading, label: Заголовок секции, type: string }
+          - { name: intro, label: Описание секции, type: text }
+          - name: steps
+            label: Шаги
+            type: object
+            list: true
+            fields:
+              - { name: num, label: Номер, type: string }
+              - { name: icon, label: Иконка (эмодзи), type: string }
+              - { name: title, label: Заголовок, type: string }
+              - { name: desc, label: Описание, type: text }
+
+      - name: cases
+        label: Кейсы / клиенты
+        type: object
+        fields:
+          - { name: eyebrow, label: Надзаголовок, type: string }
+          - { name: heading, label: Заголовок секции, type: string }
+          - { name: intro, label: Описание секции, type: text }
+          - name: items
+            label: Карточки кейсов
+            type: object
+            list: true
+            fields:
+              - { name: client, label: Клиент, type: string }
+              - { name: bag, label: Надпись на пакете, type: string }
+              - { name: meta, label: Подпись, type: string }
+              - { name: color, label: "Цвет (c1-c5)", type: string }
+
+      - name: about
+        label: О компании
+        type: object
+        fields:
+          - { name: eyebrow, label: Надзаголовок, type: string }
+          - { name: heading, label: Заголовок секции, type: string }
+          - { name: text1, label: Абзац 1, type: text }
+          - { name: text2, label: Абзац 2, type: text }
+          - name: stats
+            label: Цифры
+            type: object
+            list: true
+            fields:
+              - { name: value, label: Число, type: string }
+              - { name: plus, label: Приставка, type: string }
+              - { name: label, label: Подпись, type: string }
+
+      - name: certs
+        label: Сертификаты и благодарности
+        type: object
+        fields:
+          - { name: eyebrow, label: Надзаголовок, type: string }
+          - { name: heading, label: Заголовок секции, type: string }
+          - { name: intro, label: Описание секции, type: text }
+          - name: items
+            label: Документы
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Название, type: string }
+              - { name: tag, label: Бейдж, type: string }
+              - { name: desc, label: Описание, type: text }
+              - { name: img, label: Картинка (превью), type: image }
+              - { name: pdf, label: PDF для скачивания, type: string }
+          - { name: cta_title, label: Призыв — заголовок, type: string }
+          - { name: cta_text, label: Призыв — текст, type: text }
+          - { name: cta_button, label: Призыв — кнопка, type: string }
+
+      - name: faq
+        label: Частые вопросы
+        type: object
+        fields:
+          - { name: eyebrow, label: Надзаголовок, type: string }
+          - { name: heading, label: Заголовок секции, type: string }
+          - { name: intro, label: Описание секции, type: text }
+          - { name: cta, label: Текст кнопки, type: string }
+          - name: items
+            label: Вопросы и ответы
+            type: object
+            list: true
+            fields:
+              - { name: q, label: Вопрос, type: string }
+              - { name: a, label: Ответ, type: text }
+
+      - name: cta
+        label: Большой призыв (перед контактами)
+        type: object
+        fields:
+          - { name: heading_1, label: Заголовок (начало), type: string }
+          - { name: heading_serif, label: Заголовок (курсив), type: string }
+          - { name: text, label: Текст, type: text }
+          - { name: button, label: Кнопка, type: string }
+
+      - name: contact
+        label: Контакты
+        type: object
+        fields:
+          - { name: eyebrow, label: Надзаголовок, type: string }
+          - { name: heading, label: Заголовок секции, type: string }
+          - { name: intro, label: Описание секции, type: text }
+          - { name: phones, label: Телефоны, type: string, list: true }
+          - { name: email, label: Email, type: string }
+          - { name: address_line1, label: Адрес — строка 1, type: string }
+          - { name: address_line2, label: Адрес — строка 2, type: string }
+          - { name: telegram, label: Ссылка Telegram, type: string }
+          - { name: instagram, label: Ссылка Instagram, type: string }
+          - { name: whatsapp, label: Ссылка WhatsApp, type: string }
+          - { name: form_title, label: Форма — заголовок, type: string }
+          - { name: form_sub, label: Форма — подпись, type: string }
+
+      - name: footer
+        label: Подвал
+        type: object
+        fields:
+          - { name: about, label: О компании (текст), type: text }
+          - { name: products, label: Список «Продукция», type: string, list: true }
+          - { name: company, label: Список «Компания», type: string, list: true }
+          - { name: copyright, label: Копирайт, type: string }
