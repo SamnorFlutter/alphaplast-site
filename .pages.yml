@@ -160,6 +160,7 @@ content:
         fields:
           - { name: eyebrow, label: Надзаголовок, type: string }
           - { name: heading, label: Заголовок секции, type: string }
+          - { name: video_url, label: "Видео YouTube (вставьте ссылку; пусто = показать логотип)", type: string }
           - { name: text1, label: Абзац 1, type: text }
           - { name: text2, label: Абзац 2, type: text }
           - name: stats
