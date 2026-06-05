@@ -147,10 +147,10 @@ content:
             type: object
             list: true
             fields:
+              - { name: img, label: Фото проекта, type: image }
               - { name: client, label: Клиент, type: string }
-              - { name: bag, label: Надпись на пакете, type: string }
-              - { name: meta, label: Подпись, type: string }
-              - { name: color, label: "Цвет (c1-c5)", type: string }
+              - { name: meta, label: Подпись (тип пакета), type: string }
+              - { name: color, label: "Запасной цвет фона (c1-c5)", type: string }
 
       - name: about
         label: О компании

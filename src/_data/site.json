@@ -89,11 +89,11 @@
     "heading": "Реальные проекты с 2018 года",
     "intro": "Более 950 завершённых проектов: от 1 000 пакетов для бутика до миллионных тиражей для retail-сетей.",
     "items": [
-      { "color": "c1", "bag": "YANDEX MARKET", "client": "Yandex Market", "meta": "Пакет с вырубной ручкой", "big": true },
-      { "color": "c2", "bag": "UZPOST", "client": "UZPOST", "meta": "Курьерский пакет", "big": false },
-      { "color": "c3", "bag": "EMU", "client": "EMU", "meta": "Курьерский пакет", "big": false },
-      { "color": "c4", "bag": "RISUS", "client": "RISUS", "meta": "Пакет с вырубной ручкой", "big": false },
-      { "color": "c5", "bag": "BREAD SAMARKAND", "client": "Bread Samarkand", "meta": "Пакет с вырубной ручкой", "big": false }
+      { "img": "/assets/product-06.jpg", "color": "c1", "client": "Yandex Market", "meta": "Пакет с вырубной ручкой", "big": true },
+      { "img": "/assets/product-03.jpg", "color": "c2", "client": "UZPOST", "meta": "Курьерский пакет", "big": false },
+      { "img": "/assets/product-02.jpg", "color": "c3", "client": "EMU", "meta": "Курьерский пакет", "big": false },
+      { "img": "/assets/product-01.jpg", "color": "c4", "client": "RISUS", "meta": "Пакет с вырубной ручкой", "big": false },
+      { "img": "/assets/product-05.jpg", "color": "c5", "client": "Bread Samarkand", "meta": "Пакет с вырубной ручкой", "big": false }
     ]
   },
   "about": {

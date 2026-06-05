@@ -259,8 +259,9 @@ section{padding:120px 0;position:relative}
 .cases-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:16px;height:560px}
 .case{border-radius:var(--radius);overflow:hidden;position:relative;display:flex;align-items:flex-end;padding:28px;color:#fff;font-weight:600;cursor:pointer;transition:transform .35s}
 .case:hover{transform:scale(1.01)}
-.case::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.7));z-index:0}
-.case .case-content{position:relative;z-index:1}
+.case-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.case::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.78));z-index:1}
+.case .case-content{position:relative;z-index:2}
 .case .client{font-size:24px;font-family:var(--font-display);letter-spacing:-.02em}
 .case .meta{font-size:13px;opacity:.8;margin-top:4px;font-weight:500}
 .case.c1{grid-row:1/3;background:linear-gradient(135deg,#0F2D52,#1565C0)}
@@ -695,7 +696,7 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
     <div class="cases-grid reveal">
       {% for c in site.cases.items %}
       <div class="case {{ c.color }}">
-        <div class="case-bag"{% if c.color == "c3" or c.color == "c5" %} style="font-size:18px"{% endif %}>{{ c.bag }}</div>
+        {% if c.img %}<img class="case-photo" src="{{ c.img }}" alt="{{ c.client }}" loading="lazy">{% endif %}
         <div class="case-content">
           <div class="client">{{ c.client }}</div>
           <div class="meta">{{ c.meta }}</div>
