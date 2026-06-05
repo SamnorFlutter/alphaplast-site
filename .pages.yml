@@ -84,14 +84,12 @@ content:
             type: object
             list: true
             fields:
+              - { name: img, label: Фото пакета, type: image }
               - { name: title, label: Название, type: string }
               - { name: desc, label: Описание, type: text }
-              - { name: tag, label: Бейдж (Эко, Премиум...), type: string }
-              - { name: label, label: Надпись на пакете, type: string }
+              - { name: tag, label: "Бейдж (Полиэтилен, Премиум, Доставка...)", type: string }
               - { name: price, label: Цена, type: string }
               - { name: price_sub, label: Подпись к цене, type: string }
-              - { name: color, label: "Цвет фона (c1-c6)", type: string }
-              - { name: shape, label: "Тип пакета (пусто / paper / nonwoven)", type: string }
 
       - name: benefits
         label: Преимущества
