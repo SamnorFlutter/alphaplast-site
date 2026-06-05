@@ -23,9 +23,9 @@
     "cta_primary": "Рассчитать стоимость",
     "cta_secondary": "Смотреть каталог",
     "rating_title": "430+ компаний доверяют Alpha Plast",
-    "rating_sub": "Samsung, Artel, Huawei, Nobel, Keng",
+    "rating_sub": "Yandex Market, UZPOST, EMU, RISUS, Bread Samarkand",
     "cards": [
-      { "icon": "🤝", "title": "Партнёр крупных брендов", "sub": "Samsung · Artel · Uzum" },
+      { "icon": "🤝", "title": "Партнёр известных брендов", "sub": "Yandex Market · UZPOST · EMU" },
       { "icon": "📦", "title": "Полный ассортимент", "sub": "Полиэтилен · бумага · спанбонд" },
       { "icon": "🏭", "title": "Своё производство", "sub": "Учтепа, Ташкент · с 2018" }
     ]
@@ -38,7 +38,7 @@
   ],
   "marquee": {
     "label": "Нам доверяют лидеры рынка",
-    "clients": ["Samsung", "Artel", "Huawei", "Nobel", "Keng", "Korzinka", "Uztelecom", "Havas", "Asaka Bank"]
+    "clients": ["Yandex Market", "UZPOST", "EMU", "RISUS", "Bread Samarkand", "Donar"]
   },
   "products": {
     "eyebrow": "Каталог продукции",
@@ -89,11 +89,11 @@
     "heading": "Реальные проекты с 2018 года",
     "intro": "Более 950 завершённых проектов: от 1 000 пакетов для бутика до миллионных тиражей для retail-сетей.",
     "items": [
-      { "color": "c1", "bag": "SAMSUNG", "client": "Samsung", "meta": "Брендированная упаковка", "big": true },
-      { "color": "c2", "bag": "ARTEL", "client": "Artel", "meta": "Постоянный клиент", "big": false },
-      { "color": "c3", "bag": "HUAWEI", "client": "Huawei", "meta": "Корпоративная упаковка", "big": false },
-      { "color": "c4", "bag": "NOBEL", "client": "Nobel", "meta": "Партнёр с 2020 г.", "big": false },
-      { "color": "c5", "bag": "KENG", "client": "Keng", "meta": "Сетевой клиент", "big": false }
+      { "color": "c1", "bag": "YANDEX MARKET", "client": "Yandex Market", "meta": "Пакет с вырубной ручкой", "big": true },
+      { "color": "c2", "bag": "UZPOST", "client": "UZPOST", "meta": "Курьерский пакет", "big": false },
+      { "color": "c3", "bag": "EMU", "client": "EMU", "meta": "Курьерский пакет", "big": false },
+      { "color": "c4", "bag": "RISUS", "client": "RISUS", "meta": "Пакет с вырубной ручкой", "big": false },
+      { "color": "c5", "bag": "BREAD SAMARKAND", "client": "Bread Samarkand", "meta": "Пакет с вырубной ручкой", "big": false }
     ]
   },
   "about": {
