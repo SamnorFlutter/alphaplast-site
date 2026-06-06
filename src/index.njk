@@ -877,10 +877,11 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
         </div>
       </div>
 
-      <!-- Netlify form v2 (латинские поля) -->
-      <form class="contact-form" name="lead" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="lead">
-        <p hidden><label>Не заполняйте: <input name="bot-field"></label></p>
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="422929a6-5145-4a78-acb5-65c25623672c">
+        <input type="hidden" name="subject" value="Новая заявка с сайта Alpha Plast">
+        <input type="hidden" name="from_name" value="Сайт Alpha Plast">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <h3>{{ site.contact.form_title }}</h3>
         <p>{{ site.contact.form_sub }}</p>
 
@@ -1058,6 +1059,35 @@ document.querySelector('.burger').addEventListener('click',()=>{
   if(nav.style.display === 'flex'){ nav.style.display=''; }
   else { nav.style.cssText='display:flex;flex-direction:column;position:absolute;top:78px;left:0;right:0;background:var(--bg);padding:30px 28px;gap:20px;border-bottom:1px solid var(--line)'; }
 });
+
+/* ========== Lead form → Web3Forms (заявки на почту) ========== */
+const leadForm = document.querySelector('.contact-form');
+if(leadForm){
+  leadForm.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    const btn = leadForm.querySelector('button[type=submit]');
+    const orig = btn.innerHTML;
+    btn.disabled = true; btn.textContent = 'Отправляем…';
+    try{
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method:'POST',
+        headers:{'Accept':'application/json'},
+        body:new FormData(leadForm)
+      });
+      const data = await res.json();
+      if(data.success){
+        leadForm.reset();
+        alert('Заявка отправлена! Менеджер свяжется с вами в ближайшее время.');
+      } else {
+        alert('Не удалось отправить заявку. Попробуйте ещё раз или позвоните нам.');
+      }
+    } catch(err){
+      alert('Ошибка сети. Проверьте интернет и попробуйте снова, или позвоните нам.');
+    } finally {
+      btn.disabled = false; btn.innerHTML = orig;
+    }
+  });
+}
 </script>
 </body>
 </html>
