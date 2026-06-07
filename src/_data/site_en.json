@@ -49,7 +49,7 @@
       { "img": "assets/product-02.jpg", "tag": "Delivery", "title": "Courier bag", "desc": "Courier bag for delivery and shipping services, with logo printing.", "price": "On request", "price_sub": "depends on volume and printing" },
       { "img": "assets/product-03.jpg", "tag": "Delivery", "title": "Postal bag", "desc": "Printed postal bag — for shipments and logistics.", "price": "On request", "price_sub": "depends on volume and printing" },
       { "img": "assets/product-04.jpg", "tag": "On a roll", "title": "Bags on a roll", "desc": "Printed bags supplied on a roll.", "price": "On request", "price_sub": "specified per request" },
-      { "img": "assets/product-skechers.jpg", "tag": "Premium", "title": "Loop handle bag", "desc": "Polyethylene bag with soft loop handles and logo printing. A neat look for retail and boutiques.", "price": "On request", "price_sub": "depends on volume and printing" },
+      { "img": "assets/product-skechers.jpg?v=2", "tag": "Premium", "title": "Loop handle bag", "desc": "Polyethylene bag with soft loop handles and logo printing. A neat look for retail and boutiques.", "price": "On request", "price_sub": "depends on volume and printing" },
       { "img": "assets/product-06.jpg", "tag": "Premium", "title": "Die-cut handle bag", "desc": "Polyethylene bag with a die-cut handle and full-color printing.", "price": "On request", "price_sub": "depends on volume and printing" }
     ]
   },
