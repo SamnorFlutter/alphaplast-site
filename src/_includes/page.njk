@@ -1,3 +1,7 @@
+{%- set page_path = '/' -%}
+{%- set og_locale = 'ru_RU' -%}
+{%- if lang == 'uz' -%}{%- set page_path = '/uz.html' -%}{%- set og_locale = 'uz_UZ' -%}{%- endif -%}
+{%- if lang == 'en' -%}{%- set page_path = '/en.html' -%}{%- set og_locale = 'en_US' -%}{%- endif -%}
 <!DOCTYPE html>
 <html lang="{{ lang }}">
 <head>
@@ -6,6 +10,48 @@
 <title>{{ site.meta.title }}</title>
 <meta name="description" content="{{ site.meta.description }}">
 <link rel="icon" type="image/png" href="assets/logo-mark.png">
+<link rel="apple-touch-icon" href="assets/logo-mark.png">
+<link rel="canonical" href="{{ cfg.base_url }}{{ page_path }}">
+
+<link rel="alternate" hreflang="ru" href="{{ cfg.base_url }}/">
+<link rel="alternate" hreflang="uz" href="{{ cfg.base_url }}/uz.html">
+<link rel="alternate" hreflang="en" href="{{ cfg.base_url }}/en.html">
+<link rel="alternate" hreflang="x-default" href="{{ cfg.base_url }}/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alpha Plast">
+<meta property="og:title" content="{{ site.meta.title }}">
+<meta property="og:description" content="{{ site.meta.description }}">
+<meta property="og:url" content="{{ cfg.base_url }}{{ page_path }}">
+<meta property="og:image" content="{{ cfg.base_url }}/assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{{ og_locale }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ site.meta.title }}">
+<meta name="twitter:description" content="{{ site.meta.description }}">
+<meta name="twitter:image" content="{{ cfg.base_url }}/assets/og-cover.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ALPHA PLAST GROUP FACTORY",
+  "url": "{{ cfg.base_url }}/",
+  "logo": "{{ cfg.base_url }}/assets/logo-full.png",
+  "image": "{{ cfg.base_url }}/assets/og-cover.jpg",
+  "email": "{{ site.contact.email }}",
+  "telephone": "{{ site.header.phone_display }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tashkent",
+    "addressRegion": "Tashkent",
+    "addressCountry": "UZ",
+    "streetAddress": "Zargarlik 26, Uchtepa"
+  },
+  "sameAs": ["{{ site.contact.telegram }}", "{{ site.contact.telegram_channel }}", "{{ site.contact.instagram }}"]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -922,7 +968,7 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
         </div>
 
         <button type="submit" class="btn btn-accent form-submit">{{ site.header.cta_text }} <span class="arrow">→</span></button>
-        <div class="form-policy">{{ ui.form.policy_before }}<a href="#">{{ ui.form.policy_link }}</a></div>
+        <div class="form-policy">{{ ui.form.policy_before }}<a href="privacy.html">{{ ui.form.policy_link }}</a></div>
       </form>
     </div>
 
@@ -967,7 +1013,7 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
     </div>
     <div class="footer-bottom">
       <div>{{ site.footer.copyright }}</div>
-      <div style="display:flex;gap:24px"><a href="#">{{ ui.footer.privacy }}</a><a href="#">{{ ui.footer.offer }}</a></div>
+      <div style="display:flex;gap:24px"><a href="privacy.html">{{ ui.footer.privacy }}</a><a href="oferta.html">{{ ui.footer.offer }}</a></div>
     </div>
   </div>
 </footer>
