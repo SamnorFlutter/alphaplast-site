@@ -45,11 +45,11 @@
     "heading": "Har qanday paket turi, har qanday tiraj",
     "intro": "1 000 donadan — to'liq tayyor ishlab chiqaramiz. Asosiy turlar va so'rov bo'yicha o'nlab konfiguratsiyalar.",
     "items": [
-      { "img": "assets/product-skechers.jpg", "tag": "Premium", "title": "Ilmoqli dastali paket", "desc": "Ilmoqli dastali polietilen paket, logotip bosmasi bilan. Do'kon va butiklar uchun ozoda ko'rinish.", "price": "So'rov bo'yicha", "price_sub": "tiraj va bosmaga bog'liq" },
       { "img": "assets/product-maika.jpg", "tag": "Polietilen", "title": "Mayka paket", "desc": "Logotip bosmasi bilan polietilen mayka paket. Chakana savdo uchun universal format.", "price": "So'rov bo'yicha", "price_sub": "tiraj va bosmaga bog'liq" },
       { "img": "assets/product-02.jpg", "tag": "Yetkazib berish", "title": "Kuryerlik paketi", "desc": "Yetkazib berish va jo'natmalar uchun kuryerlik paketi, logotip bosmasi bilan.", "price": "So'rov bo'yicha", "price_sub": "tiraj va bosmaga bog'liq" },
       { "img": "assets/product-03.jpg", "tag": "Yetkazib berish", "title": "Pochta paketi", "desc": "Jo'natmalar va logistika uchun bosma pochta paketi.", "price": "So'rov bo'yicha", "price_sub": "tiraj va bosmaga bog'liq" },
       { "img": "assets/product-04.jpg", "tag": "Rulon", "title": "Rulondagi paketlar", "desc": "Rulonda bosma paketlar.", "price": "So'rov bo'yicha", "price_sub": "TZ bo'yicha aniqlanadi" },
+      { "img": "assets/product-skechers.jpg", "tag": "Premium", "title": "Ilmoqli dastali paket", "desc": "Ilmoqli dastali polietilen paket, logotip bosmasi bilan. Do'kon va butiklar uchun ozoda ko'rinish.", "price": "So'rov bo'yicha", "price_sub": "tiraj va bosmaga bog'liq" },
       { "img": "assets/product-06.jpg", "tag": "Premium", "title": "Probiy dastali paket", "desc": "Probiy dastali polietilen paket, to'liq rangli bosma bilan.", "price": "So'rov bo'yicha", "price_sub": "tiraj va bosmaga bog'liq" }
     ]
   },
