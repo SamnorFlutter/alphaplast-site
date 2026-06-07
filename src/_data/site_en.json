@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "title": "Alpha Plast — Custom printed bags manufacturer in Tashkent",
+    "description": "Polyethylene, paper and non-woven bags with custom logo printing. Own production in Tashkent. Registered trademark, Faxriy Yorliq award."
+  },
+  "topbar": {
+    "email": "info@alphaplast.uz",
+    "address": "Tashkent, Uchtepa district, Zargarlik St. 26",
+    "hours": "Mon–Sat: 9:00–18:00"
+  },
+  "header": {
+    "phone_display": "+998 99 170-17-00",
+    "phone_link": "+998991701700",
+    "cta_text": "Get a quote"
+  },
+  "hero": {
+    "tag": "Now accepting orders for new print runs",
+    "title_line1": "Bags",
+    "title_serif": "with your",
+    "title_accent": "logo",
+    "title_line3": "for business",
+    "lead": "Own production in Tashkent: polyethylene, paper kraft bags and non-woven (spunbond) bags. Registered trademark, Faxriy Yorliq award from the Tashkent City Khokimiyat.",
+    "cta_primary": "Calculate the cost",
+    "cta_secondary": "View catalog",
+    "rating_title": "430+ companies trust Alpha Plast",
+    "rating_sub": "Yandex Market, UZPOST, EMU, RISUS, Bread Samarkand",
+    "cards": [
+      { "icon": "🤝", "title": "Partner of known brands", "sub": "Yandex Market · UZPOST · EMU" },
+      { "icon": "📦", "title": "Full product range", "sub": "Polyethylene · paper · non-woven" },
+      { "icon": "🏭", "title": "In-house production", "sub": "Uchtepa, Tashkent · since 2018" }
+    ]
+  },
+  "stats": [
+    { "value": "20", "plus": "+ mln", "label": "Bags produced" },
+    { "value": "430", "plus": "+", "label": "Clients across Uzbekistan" },
+    { "value": "950", "plus": "+", "label": "Completed projects" },
+    { "value": "since 2018", "plus": "", "label": "On the Uzbek market" }
+  ],
+  "marquee": {
+    "label": "Trusted by market leaders",
+    "clients": ["Yandex Market", "UZPOST", "EMU", "RISUS", "Bread Samarkand", "Donar"]
+  },
+  "products": {
+    "eyebrow": "Product catalog",
+    "heading": "Any packaging format, any volume",
+    "intro": "From 1,000 pcs — full turnkey production. Core bag types and dozens of configurations on request.",
+    "items": [
+      { "img": "assets/product-maika.jpg", "tag": "Polyethylene", "title": "T-shirt bag", "desc": "Polyethylene t-shirt (vest) bag with custom logo printing. A universal format for retail.", "price": "On request", "price_sub": "depends on volume and printing" },
+      { "img": "assets/product-02.jpg", "tag": "Delivery", "title": "Courier bag", "desc": "Courier bag for delivery and shipping services, with logo printing.", "price": "On request", "price_sub": "depends on volume and printing" },
+      { "img": "assets/product-03.jpg", "tag": "Delivery", "title": "Postal bag", "desc": "Printed postal bag — for shipments and logistics.", "price": "On request", "price_sub": "depends on volume and printing" },
+      { "img": "assets/product-04.jpg", "tag": "On a roll", "title": "Bags on a roll", "desc": "Printed bags supplied on a roll.", "price": "On request", "price_sub": "specified per request" },
+      { "img": "assets/product-06.jpg", "tag": "Premium", "title": "Die-cut handle bag", "desc": "Polyethylene bag with a die-cut handle and full-color printing.", "price": "On request", "price_sub": "depends on volume and printing" }
+    ]
+  },
+  "benefits": {
+    "eyebrow": "Why Alpha Plast",
+    "heading": "4 reasons to choose us",
+    "intro": "A full production cycle in-house means quality control at every step and predictable lead times.",
+    "items": [
+      { "num": "/ 01", "icon": "factory", "title": "Own production", "desc": "Full cycle in-house: extrusion, flexo printing and cutting. No middlemen, no markups." },
+      { "num": "/ 02", "icon": "shield", "title": "Protected brand", "desc": "Registered trademark “Alpha plast” — Guvohnoma No. MGU 56687 from the Ministry of Justice of the Republic of Uzbekistan." },
+      { "num": "/ 03", "icon": "award", "title": "State award", "desc": "Faxriy Yorliq — a certificate of honor from the Tashkent City Khokimiyat and the Directorate of Industrial Zones, 2025." },
+      { "num": "/ 04", "icon": "check", "title": "Quality products", "desc": "Geometry, print and strength control on every batch — recognized with letters of thanks from Uzum Market and Saia." }
+    ]
+  },
+  "configurator": {
+    "eyebrow": "Request builder",
+    "heading": "Set the parameters in 30 seconds",
+    "intro": "Choose a configuration — we'll prepare a personal commercial offer for your volume.",
+    "note": "The exact price, including materials, printing and delivery, will be confirmed by a manager during working hours.",
+    "cta": "Get a quote"
+  },
+  "process": {
+    "eyebrow": "How it works",
+    "heading": "From request to delivery — 6 steps",
+    "intro": "No bureaucracy and no surprises in the final price: all terms are fixed in the contract.",
+    "steps": [
+      { "num": "/ 01", "icon": "📋", "title": "Request", "desc": "Leave a request on the site, via Telegram or by phone — we'll get in touch." },
+      { "num": "/ 02", "icon": "🧮", "title": "Quote", "desc": "We prepare a commercial offer with material and printing details." },
+      { "num": "/ 03", "icon": "🎨", "title": "Artwork", "desc": "We approve the print-ready artwork based on your brand style." },
+      { "num": "/ 04", "icon": "💳", "title": "Contract", "desc": "We sign the contract and fix the deadlines and payment terms." },
+      { "num": "/ 05", "icon": "🏭", "title": "Production", "desc": "Full cycle on our own lines with quality control." },
+      { "num": "/ 06", "icon": "🚚", "title": "Delivery", "desc": "Shipment to your warehouse across Uzbekistan." }
+    ]
+  },
+  "cases": {
+    "eyebrow": "Cases",
+    "heading": "Real projects since 2018",
+    "intro": "Over 950 completed projects: from 1,000 bags for a boutique to million-unit runs for retail chains.",
+    "items": [
+      { "img": "assets/product-06.jpg", "color": "c1", "client": "Yandex Market", "meta": "Die-cut handle bag", "big": true },
+      { "img": "assets/product-03.jpg", "color": "c2", "client": "UZPOST", "meta": "Courier bag", "big": false },
+      { "img": "assets/product-02.jpg", "color": "c3", "client": "EMU", "meta": "Courier bag", "big": false },
+      { "img": "assets/product-01.jpg", "color": "c4", "client": "RISUS", "meta": "Die-cut handle bag", "big": false },
+      { "img": "assets/product-05.jpg", "color": "c5", "client": "Bread Samarkand", "meta": "Die-cut handle bag", "big": false }
+    ]
+  },
+  "about": {
+    "eyebrow": "About us",
+    "heading": "Next-generation manufacturing",
+    "video_url": "https://www.youtube.com/watch?v=H0NhxhbwdpQ",
+    "text1": "“ALPHA PLAST GROUP FACTORY” LLC is a next-generation manufacturing company in Tashkent. Since 2018 we have produced over 20 million bags for brands of every scale — from local boutiques to international corporations.",
+    "text2": "Our mission is to make quality branded packaging for businesses of any size. The “Alpha plast” trademark is officially registered with the Ministry of Justice of Uzbekistan, and in 2025 the company was awarded the Faxriy Yorliq by the Tashkent City Khokimiyat.",
+    "stats": [
+      { "value": "20", "plus": "M+", "label": "Bags produced" },
+      { "value": "430", "plus": "+", "label": "B2B clients" },
+      { "value": "950", "plus": "+", "label": "Completed projects" }
+    ]
+  },
+  "certs": {
+    "eyebrow": "Documents",
+    "heading": "Certificates & letters of thanks",
+    "intro": "Registered trademark “Alpha Plast” and letters of thanks from government bodies and partners.",
+    "items": [
+      { "img": "assets/cert-guvohnoma-1.png", "pdf": "assets/cert-guvohnoma-1.pdf", "tag": "Trademark", "title": "Guvohnoma No. MGU 56687", "desc": "Trademark registration certificate for “Alpha plast”. Ministry of Justice of the Republic of Uzbekistan, 2024." },
+      { "img": "assets/cert-guvohnoma-2.png", "pdf": "assets/cert-guvohnoma-2.pdf", "tag": "Appendix", "title": "Appendix No. MGU 56687", "desc": "Description of the Nice Classification classes — plastic materials and packaging (class 16)." },
+      { "img": "assets/cert-thanks-2.png", "pdf": "assets/cert-thanks-2.pdf", "tag": "State award", "title": "FAXRIY YORLIQ", "desc": "Certificate of honor from the Tashkent City Khokimiyat and the Directorate of Industrial Zones, 2025." },
+      { "img": "assets/cert-thanks-3.png", "pdf": "assets/cert-thanks-3.pdf", "tag": "Partner", "title": "Uzum Market", "desc": "Letter of thanks for professionalism and quality production of polyethylene bags, 2025." },
+      { "img": "assets/cert-thanks-1.png", "pdf": "assets/cert-thanks-1.pdf", "tag": "Partner", "title": "Saia café & bakery", "desc": "Letter of thanks for fruitful cooperation and meeting delivery deadlines, 2025." }
+    ],
+    "cta_title": "Want the same quality for your brand?",
+    "cta_text": "Request a quote — our manager will prepare an offer for your volume.",
+    "cta_button": "Send a request"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "heading": "Frequently asked questions",
+    "intro": "If you don't find your question — write to us via Telegram, WhatsApp or by phone.",
+    "cta": "Ask a question",
+    "items": [
+      { "q": "What is the minimum order?", "a": "It depends on the bag type and print complexity. A manager will tell you the exact figure for your project after clarifying the parameters." },
+      { "q": "How long does production take?", "a": "The lead time depends on volume, material type and print complexity. After artwork approval, the manager will give the exact shipping date and fix it in the contract." },
+      { "q": "What printing methods are available?", "a": "Flexo printing — for PE bags. Offset — for paper. Silk-screen and thermal printing — for non-woven. Custom technologies on request." },
+      { "q": "Do you work with legal entities?", "a": "Yes, we sign a contract, issue invoices and closing documents. Payment terms are discussed individually with each client." },
+      { "q": "Do you deliver to the regions?", "a": "Yes, we arrange delivery across Uzbekistan. Delivery terms and cost depend on the region and volume — check with a manager." },
+      { "q": "What if we don't have ready artwork?", "a": "No problem. Our specialist will prepare print-ready artwork based on your logo or brand style — the terms are discussed individually." }
+    ]
+  },
+  "cta": {
+    "heading_1": "Ready to launch",
+    "heading_serif": "your print run?",
+    "text": "Leave a request — a manager will send a quote with the exact price and lead time for your volume.",
+    "button": "Get a quote"
+  },
+  "contact": {
+    "eyebrow": "Contacts",
+    "heading": "Get in touch",
+    "intro": "A manager will reply during working hours. On weekends — write via Telegram or WhatsApp.",
+    "phones": ["+998 95 170-34-43", "+998 99 170-17-00", "+998 99 170-46-44"],
+    "email": "info@alphaplast.uz",
+    "address_line1": "Tashkent, Uchtepa district",
+    "address_line2": "Zargarlik St. 26",
+    "telegram": "#",
+    "instagram": "#",
+    "whatsapp": "#",
+    "form_title": "Send a request",
+    "form_sub": "We'll prepare a quote with terms for your volume"
+  },
+  "footer": {
+    "about": "Manufacturer of custom logo-printed bags and packaging in Tashkent. Full cycle — from design to delivery across Uzbekistan.",
+    "products": ["T-shirt bag", "Loop handle", "Paper kraft", "Non-woven bags", "Zip-lock"],
+    "company": ["About", "How we work", "Cases", "Certificates", "Careers"],
+    "copyright": "© 2026 “ALPHA PLAST GROUP FACTORY” LLC. All rights reserved."
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "products": "Products",
+    "calc": "Calculator",
+    "process": "How we work",
+    "cases": "Cases",
+    "certs": "Certificates",
+    "about": "About",
+    "contact": "Contacts"
+  },
+  "configurator": {
+    "type_label": "Bag type",
+    "types": [
+      { "val": "T-shirt bag", "label": "T-shirt bag" },
+      { "val": "Loop handle", "label": "Loop handle" },
+      { "val": "Kraft", "label": "Kraft" },
+      { "val": "Patch handle", "label": "Patch handle" },
+      { "val": "Non-woven", "label": "Non-woven" },
+      { "val": "Zip-lock", "label": "Zip-lock" }
+    ],
+    "print_label": "Printing",
+    "prints": [
+      { "val": "No print", "label": "No print" },
+      { "val": "1 color", "label": "1 color" },
+      { "val": "2–4 colors", "label": "2–4 colors" },
+      { "val": "Full color", "label": "Full color" }
+    ],
+    "qty_label": "Quantity:",
+    "pcs": "pcs",
+    "size_label": "Size",
+    "sizes": [
+      { "val": "S", "label": "S (small)" },
+      { "val": "M", "label": "M (medium)" },
+      { "val": "L", "label": "L (large)" },
+      { "val": "Custom", "label": "Custom" }
+    ],
+    "config_title": "Your configuration",
+    "row_type": "Bag type",
+    "row_print": "Printing",
+    "row_qty": "Quantity",
+    "row_size": "Size",
+    "row_layout": "Artwork approval",
+    "layout_val": "By agreement",
+    "row_delivery": "Delivery",
+    "delivery_val": "On request"
+  },
+  "lightbox_download": "Download PDF",
+  "lightbox_close": "Close",
+  "form": {
+    "interest": "What are you interested in?",
+    "other": "Other",
+    "name": "Name",
+    "name_ph": "Your name",
+    "company": "Company",
+    "company_ph": "Company name",
+    "phone": "Phone*",
+    "phone_ph": "+998 __ ___ __ __",
+    "qty": "Quantity, pcs",
+    "qty_ph": "e.g. 10 000",
+    "comment": "Message",
+    "comment_ph": "Describe your task: size, printing, artwork...",
+    "policy_before": "By clicking the button, you agree to the ",
+    "policy_link": "data processing policy"
+  },
+  "contact": {
+    "phones": "Phones",
+    "email": "Email",
+    "email_note": "Write anytime",
+    "office": "Production & office"
+  },
+  "footer": {
+    "products": "Products",
+    "company": "Company",
+    "contacts": "Contacts",
+    "privacy": "Privacy policy",
+    "offer": "Public offer"
+  },
+  "js": {
+    "sending": "Sending…",
+    "sent": "Request sent! Our manager will contact you shortly.",
+    "fail": "Could not send the request. Please try again or call us.",
+    "neterr": "Network error. Check your connection and try again, or call us.",
+    "c_type": "Type",
+    "c_print": "Printing",
+    "c_qty": "Quantity",
+    "c_size": "Size",
+    "c_pcs": "pcs",
+    "locale": "en-US"
+  }
+}
