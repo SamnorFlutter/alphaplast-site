@@ -227,9 +227,10 @@ content:
           - { name: email, label: Email, type: string }
           - { name: address_line1, label: Адрес — строка 1, type: string }
           - { name: address_line2, label: Адрес — строка 2, type: string }
-          - { name: telegram, label: Ссылка Telegram, type: string }
+          - { name: telegram, label: Ссылка Telegram (аккаунт), type: string }
+          - { name: telegram_channel, label: Ссылка Telegram (канал), type: string }
           - { name: instagram, label: Ссылка Instagram, type: string }
-          - { name: whatsapp, label: Ссылка WhatsApp, type: string }
+          - { name: whatsapp, label: "Ссылка WhatsApp (не используется)", type: string }
           - { name: form_title, label: Форма — заголовок, type: string }
           - { name: form_sub, label: Форма — подпись, type: string }
 
@@ -246,4 +247,10 @@ content:
     label: "Контент сайта (English)"
     type: file
     path: src/_data/site_en.json
+    fields: *content_fields
+
+  - name: site_uz
+    label: "Контент сайта (O'zbekcha)"
+    type: file
+    path: src/_data/site_uz.json
     fields: *content_fields

@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "products": "Mahsulotlar",
+    "calc": "Kalkulyator",
+    "process": "Qanday ishlaymiz",
+    "cases": "Loyihalar",
+    "certs": "Sertifikatlar",
+    "about": "Biz haqimizda",
+    "contact": "Kontaktlar"
+  },
+  "configurator": {
+    "type_label": "Paket turi",
+    "types": [
+      { "val": "Mayka", "label": "Mayka" },
+      { "val": "Ilmoqli dasta", "label": "Ilmoqli dasta" },
+      { "val": "Kraft", "label": "Kraft" },
+      { "val": "Banan", "label": "Banan" },
+      { "val": "Spanbond", "label": "Spanbond" },
+      { "val": "Zip-lock", "label": "Zip-lock" }
+    ],
+    "print_label": "Bosma",
+    "prints": [
+      { "val": "Bosmasiz", "label": "Bosmasiz" },
+      { "val": "1 rang", "label": "1 rang" },
+      { "val": "2–4 rang", "label": "2–4 rang" },
+      { "val": "To'liq rang", "label": "To'liq rang" }
+    ],
+    "qty_label": "Tiraj:",
+    "pcs": "dona",
+    "size_label": "O'lcham",
+    "sizes": [
+      { "val": "S", "label": "S (kichik)" },
+      { "val": "M", "label": "M (o'rta)" },
+      { "val": "L", "label": "L (katta)" },
+      { "val": "Boshqa", "label": "Boshqa" }
+    ],
+    "config_title": "Sizning konfiguratsiyangiz",
+    "row_type": "Paket turi",
+    "row_print": "Bosma",
+    "row_qty": "Tiraj",
+    "row_size": "O'lcham",
+    "row_layout": "Maketni kelishish",
+    "layout_val": "Kelishuv bo'yicha",
+    "row_delivery": "Yetkazib berish",
+    "delivery_val": "Aniqlanadi"
+  },
+  "lightbox_download": "PDF yuklab olish",
+  "lightbox_close": "Yopish",
+  "form": {
+    "interest": "Sizni nima qiziqtiradi?",
+    "other": "Boshqa",
+    "name": "Ism",
+    "name_ph": "Ismingiz",
+    "company": "Kompaniya",
+    "company_ph": "MChJ / YaTT",
+    "phone": "Telefon*",
+    "phone_ph": "+998 __ ___ __ __",
+    "qty": "Tiraj, dona",
+    "qty_ph": "masalan, 10 000",
+    "comment": "Izoh",
+    "comment_ph": "Vazifani tasvirlang: o'lcham, bosma, maket mavjudligi...",
+    "policy_before": "Tugmani bosib, siz ",
+    "policy_link": "ma'lumotlarni qayta ishlash siyosatiga rozilik bildirasiz"
+  },
+  "contact": {
+    "phones": "Telefonlar",
+    "email": "Email",
+    "email_note": "Istalgan vaqtda yozing",
+    "office": "Ishlab chiqarish va ofis"
+  },
+  "footer": {
+    "products": "Mahsulotlar",
+    "company": "Kompaniya",
+    "contacts": "Kontaktlar",
+    "privacy": "Maxfiylik siyosati",
+    "offer": "Ommaviy oferta"
+  },
+  "js": {
+    "sending": "Yuborilmoqda…",
+    "sent": "So'rov yuborildi! Menejer tez orada siz bilan bog'lanadi.",
+    "fail": "So'rovni yuborib bo'lmadi. Qayta urinib ko'ring yoki qo'ng'iroq qiling.",
+    "neterr": "Tarmoq xatosi. Internetni tekshiring va qayta urinib ko'ring yoki qo'ng'iroq qiling.",
+    "c_type": "Tur",
+    "c_print": "Bosma",
+    "c_qty": "Tiraj",
+    "c_size": "O'lcham",
+    "c_pcs": "dona",
+    "locale": "uz-UZ"
+  }
+}

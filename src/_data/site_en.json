@@ -45,6 +45,7 @@
     "heading": "Any packaging format, any volume",
     "intro": "From 1,000 pcs — full turnkey production. Core bag types and dozens of configurations on request.",
     "items": [
+      { "img": "assets/product-skechers.jpg", "tag": "Premium", "title": "Loop handle bag", "desc": "Polyethylene bag with soft loop handles and logo printing. A neat look for retail and boutiques.", "price": "On request", "price_sub": "depends on volume and printing" },
       { "img": "assets/product-maika.jpg", "tag": "Polyethylene", "title": "T-shirt bag", "desc": "Polyethylene t-shirt (vest) bag with custom logo printing. A universal format for retail.", "price": "On request", "price_sub": "depends on volume and printing" },
       { "img": "assets/product-02.jpg", "tag": "Delivery", "title": "Courier bag", "desc": "Courier bag for delivery and shipping services, with logo printing.", "price": "On request", "price_sub": "depends on volume and printing" },
       { "img": "assets/product-03.jpg", "tag": "Delivery", "title": "Postal bag", "desc": "Printed postal bag — for shipments and logistics.", "price": "On request", "price_sub": "depends on volume and printing" },
@@ -125,7 +126,7 @@
   "faq": {
     "eyebrow": "FAQ",
     "heading": "Frequently asked questions",
-    "intro": "If you don't find your question — write to us via Telegram, WhatsApp or by phone.",
+    "intro": "If you don't find your question — write to us via Telegram or by phone.",
     "cta": "Ask a question",
     "items": [
       { "q": "What is the minimum order?", "a": "It depends on the bag type and print complexity. A manager will tell you the exact figure for your project after clarifying the parameters." },
@@ -145,14 +146,15 @@
   "contact": {
     "eyebrow": "Contacts",
     "heading": "Get in touch",
-    "intro": "A manager will reply during working hours. On weekends — write via Telegram or WhatsApp.",
+    "intro": "A manager will reply during working hours. On weekends — write via Telegram.",
     "phones": ["+998 95 170-34-43", "+998 99 170-17-00", "+998 99 170-46-44"],
     "email": "info@alphaplast.uz",
     "address_line1": "Tashkent, Uchtepa district",
     "address_line2": "Zargarlik St. 26",
-    "telegram": "#",
-    "instagram": "#",
-    "whatsapp": "#",
+    "telegram": "https://t.me/alphaplastuz",
+    "telegram_channel": "https://t.me/alpha_plast",
+    "instagram": "https://www.instagram.com/alphaplast_uz/",
+    "whatsapp": "",
     "form_title": "Send a request",
     "form_sub": "We'll prepare a quote with terms for your volume"
   },
