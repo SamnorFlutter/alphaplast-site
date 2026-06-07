@@ -6,10 +6,10 @@ media:
 
 content:
   - name: site
-    label: Контент сайта
+    label: "Контент сайта (Русский)"
     type: file
     path: src/_data/site.json
-    fields:
+    fields: &content_fields
       - name: meta
         label: SEO (вкладка браузера и поиск)
         type: object
@@ -241,3 +241,9 @@ content:
           - { name: products, label: Список «Продукция», type: string, list: true }
           - { name: company, label: Список «Компания», type: string, list: true }
           - { name: copyright, label: Копирайт, type: string }
+
+  - name: site_en
+    label: "Контент сайта (English)"
+    type: file
+    path: src/_data/site_en.json
+    fields: *content_fields
