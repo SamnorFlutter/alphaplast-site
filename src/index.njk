@@ -540,7 +540,7 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
 
     <div class="products-grid reveal">
       {% for p in site.products.items %}
-      <div class="product">
+      <div class="product" data-product="{{ p.title }}">
         <div class="product-img">
           {% if p.tag %}<span class="product-tag">{{ p.tag }}</span>{% endif %}
           <img src="{{ p.img }}" alt="{{ p.title }}" loading="lazy">
@@ -888,13 +888,10 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
         <div class="form-row">
           <label>Что вас интересует?</label>
           <div class="form-chips">
-            <div class="chip active">Майка</div>
-            <div class="chip">Петля</div>
-            <div class="chip">Крафт</div>
-            <div class="chip">Спанбонд</div>
+            {% for p in site.products.items %}<div class="chip{% if loop.first %} active{% endif %}">{{ p.title }}</div>{% endfor %}
             <div class="chip">Другое</div>
           </div>
-          <input type="hidden" name="Product" id="chip-value" value="Майка">
+          <input type="hidden" name="Product" id="chip-value" value="{{ site.products.items[0].title }}">
         </div>
 
         <div class="form-row two">
@@ -995,6 +992,28 @@ function setupGroup(sel){
   });
 }
 ['#type-opts','#print-opts','#size-opts','.form-chips','.lang'].forEach(setupGroup);
+
+/* ========== Клик по карточке товара → форма с выбранным типом ========== */
+document.querySelectorAll('.product[data-product]').forEach(card=>{
+  card.addEventListener('click', ()=>{
+    const name = card.dataset.product;
+    const chips = [...document.querySelectorAll('.form-chips .chip')];
+    let matched = false;
+    chips.forEach(c=>{
+      const on = c.textContent.trim() === name;
+      c.classList.toggle('active', on);
+      if(on) matched = true;
+    });
+    if(!matched){
+      const other = chips.find(c=>c.textContent.trim()==='Другое');
+      if(other) other.classList.add('active');
+    }
+    const hidden = document.getElementById('chip-value');
+    if(hidden) hidden.value = name;
+    const contact = document.getElementById('contact');
+    if(contact) contact.scrollIntoView({behavior:'smooth'});
+  });
+});
 
 /* ========== Configurator — only summarizes user's choices, no prices ========== */
 const fmt = n => n.toLocaleString('ru-RU').replace(/,/g,' ');
