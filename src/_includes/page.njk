@@ -1110,14 +1110,28 @@ if(leadForm){
     const btn = leadForm.querySelector('button[type=submit]');
     const orig = btn.innerHTML;
     btn.disabled = true; btn.textContent = T.sending;
+    const fd = new FormData(leadForm);
     try{
       const res = await fetch('https://api.web3forms.com/submit', {
         method:'POST',
         headers:{'Accept':'application/json'},
-        body:new FormData(leadForm)
+        body:fd
       });
       const data = await res.json();
       if(data.success){
+        const g = k => (fd.get(k) || '—');
+        const tgText = '🛍 Новая заявка — Alpha Plast\n\n'
+          + '👤 Имя: ' + g('Name') + '\n'
+          + '🏢 Компания: ' + g('Company') + '\n'
+          + '📞 Телефон: ' + g('Phone') + '\n'
+          + '📦 Интересует: ' + g('Product') + '\n'
+          + '🔢 Тираж: ' + g('Quantity') + '\n'
+          + '💬 Комментарий: ' + g('Comment');
+        fetch('https://api.telegram.org/bot8837051167:AAHl-I-7kRr2deWKD_4Y4YkQg3SlxoTp24c/sendMessage', {
+          method:'POST',
+          headers:{'Content-Type':'application/x-www-form-urlencoded'},
+          body:'chat_id=1234571697&text=' + encodeURIComponent(tgText)
+        }).catch(function(){});
         leadForm.reset();
         alert(T.sent);
       } else {
