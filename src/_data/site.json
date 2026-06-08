@@ -115,7 +115,6 @@
     "items": [
       { "img": "assets/cert-guvohnoma-1.png", "pdf": "assets/cert-guvohnoma-1.pdf", "tag": "Товарный знак", "title": "Guvohnoma № MGU 56687", "desc": "Свидетельство о регистрации товарного знака «Alpha plast». Минюст Республики Узбекистан, 2024." },
       { "img": "assets/cert-guvohnoma-2.png", "pdf": "assets/cert-guvohnoma-2.pdf", "tag": "Приложение", "title": "Приложение № MGU 56687", "desc": "Описание классов МКТУ — пластиковые материалы и упаковка (16-й класс)." },
-      { "img": "assets/cert-thanks-2.png", "pdf": "assets/cert-thanks-2.pdf", "tag": "Государственная награда", "title": "FAXRIY YORLIQ", "desc": "Почётная грамота от Хокимията г. Ташкента и Дирекции промышленных зон, 2025." },
       { "img": "assets/cert-thanks-3.png", "pdf": "assets/cert-thanks-3.pdf", "tag": "Партнёр", "title": "Uzum Market", "desc": "Благодарственное письмо за профессионализм и качество производства полиэтиленовых пакетов, 2025." },
       { "img": "assets/cert-thanks-1.png", "pdf": "assets/cert-thanks-1.pdf", "tag": "Партнёр", "title": "Saia café & bakery", "desc": "Благодарность за плодотворное сотрудничество и соблюдение сроков поставок, 2025." }
     ],
