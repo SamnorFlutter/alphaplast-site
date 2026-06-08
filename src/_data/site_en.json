@@ -55,13 +55,12 @@
   },
   "benefits": {
     "eyebrow": "Why Alpha Plast",
-    "heading": "4 reasons to choose us",
+    "heading": "3 reasons to choose us",
     "intro": "A full production cycle in-house means quality control at every step and predictable lead times.",
     "items": [
       { "num": "/ 01", "icon": "factory", "title": "Own production", "desc": "Full cycle in-house: extrusion, flexo printing and cutting. No middlemen, no markups." },
       { "num": "/ 02", "icon": "shield", "title": "Protected brand", "desc": "Registered trademark “Alpha plast” — Guvohnoma No. MGU 56687 from the Ministry of Justice of the Republic of Uzbekistan." },
-      { "num": "/ 03", "icon": "award", "title": "State award", "desc": "Faxriy Yorliq — a certificate of honor from the Tashkent City Khokimiyat and the Directorate of Industrial Zones, 2025." },
-      { "num": "/ 04", "icon": "check", "title": "Quality products", "desc": "Geometry, print and strength control on every batch — recognized with letters of thanks from Uzum Market and Saia." }
+      { "num": "/ 03", "icon": "check", "title": "Quality products", "desc": "Geometry, print and strength control on every batch — recognized with letters of thanks from Uzum Market and Saia." }
     ]
   },
   "configurator": {

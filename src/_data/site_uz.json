@@ -55,13 +55,12 @@
   },
   "benefits": {
     "eyebrow": "Nega Alpha Plast",
-    "heading": "Bizni tanlash uchun 4 sabab",
+    "heading": "Bizni tanlash uchun 3 sabab",
     "intro": "To'liq ishlab chiqarish tsikli kompaniya ichida — bu har bosqichda sifat nazorati va bashorat qilinadigan muddatlar.",
     "items": [
       { "num": "/ 01", "icon": "factory", "title": "O'z ishlab chiqarishimiz", "desc": "To'liq tsikl ichkarida: ekstruziya, fleksobosma va kesish. Vositachilarsiz va ortiqcha to'lovsiz." },
       { "num": "/ 02", "icon": "shield", "title": "Himoyalangan brend", "desc": "Ro'yxatdan o'tgan «Alpha plast» tovar belgisi — O'zbekiston Respublikasi Adliya vazirligidan Guvohnoma № MGU 56687." },
-      { "num": "/ 03", "icon": "award", "title": "Davlat mukofoti", "desc": "Faxriy Yorliq — Toshkent shahar hokimligi va Sanoat zonalari direksiyasining faxriy yorlig'i, 2025." },
-      { "num": "/ 04", "icon": "check", "title": "Sifatli mahsulot", "desc": "Har partiyada geometriya, bosma va mustahkamlik nazorati — Uzum Market va Saia minnatdorchiliklari bilan e'tirof etilgan." }
+      { "num": "/ 03", "icon": "check", "title": "Sifatli mahsulot", "desc": "Har partiyada geometriya, bosma va mustahkamlik nazorati — Uzum Market va Saia minnatdorchiliklari bilan e'tirof etilgan." }
     ]
   },
   "configurator": {
