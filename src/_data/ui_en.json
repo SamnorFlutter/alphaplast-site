@@ -60,7 +60,8 @@
     "comment": "Message",
     "comment_ph": "Describe your task: size, printing, artwork...",
     "policy_before": "By clicking the button, you agree to the ",
-    "policy_link": "data processing policy"
+    "policy_link": "data processing policy",
+    "calc_added": "✓ Your configuration was added to the request — fill in your contacts below and we'll send you a quote."
   },
   "contact": {
     "phones": "Phones",

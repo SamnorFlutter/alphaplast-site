@@ -1,6 +1,6 @@
 {%- set page_path = '/' -%}
-{%- set og_locale = 'ru_RU' -%}
-{%- if lang == 'uz' -%}{%- set page_path = '/uz.html' -%}{%- set og_locale = 'uz_UZ' -%}{%- endif -%}
+{%- set og_locale = 'uz_UZ' -%}
+{%- if lang == 'ru' -%}{%- set page_path = '/ru.html' -%}{%- set og_locale = 'ru_RU' -%}{%- endif -%}
 {%- if lang == 'en' -%}{%- set page_path = '/en.html' -%}{%- set og_locale = 'en_US' -%}{%- endif -%}
 <!DOCTYPE html>
 <html lang="{{ lang }}">
@@ -13,8 +13,8 @@
 <link rel="apple-touch-icon" href="assets/logo-mark.png">
 <link rel="canonical" href="{{ cfg.base_url }}{{ page_path }}">
 
-<link rel="alternate" hreflang="ru" href="{{ cfg.base_url }}/">
-<link rel="alternate" hreflang="uz" href="{{ cfg.base_url }}/uz.html">
+<link rel="alternate" hreflang="uz" href="{{ cfg.base_url }}/">
+<link rel="alternate" hreflang="ru" href="{{ cfg.base_url }}/ru.html">
 <link rel="alternate" hreflang="en" href="{{ cfg.base_url }}/en.html">
 <link rel="alternate" hreflang="x-default" href="{{ cfg.base_url }}/">
 
@@ -55,7 +55,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
 <style>
 /* ==============================
@@ -79,7 +79,7 @@
   --shadow:    0 30px 60px -30px rgba(14,16,20,.25);
   --shadow-sm: 0 10px 30px -20px rgba(14,16,20,.4);
   --container: 1240px;
-  --font-display: "Bricolage Grotesque", "Plus Jakarta Sans", sans-serif;
+  --font-display: "Manrope", "Plus Jakarta Sans", sans-serif;
   --font-text:    "Plus Jakarta Sans", system-ui, sans-serif;
   --font-serif:   "Instrument Serif", Georgia, serif;
 }
@@ -391,6 +391,10 @@ section{padding:120px 0;position:relative}
 .soc{width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;transition:all .2s}
 .soc:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-2px)}
 .contact-form{background:#fff;border-radius:var(--radius);padding:44px;box-shadow:var(--shadow-sm)}
+.contact-form.flash{animation:formFlash 1.1s ease-out}
+@keyframes formFlash{0%{box-shadow:0 0 0 0 rgba(225,30,30,.5)}70%{box-shadow:0 0 0 16px rgba(225,30,30,0)}100%{box-shadow:var(--shadow-sm)}}
+.calc-note{display:flex;gap:8px;align-items:flex-start;background:rgba(22,163,74,.10);border:1px solid rgba(22,163,74,.35);color:#14794a;border-radius:12px;padding:13px 16px;font-size:14px;font-weight:600;line-height:1.45;margin-bottom:26px}
+.calc-note[hidden]{display:none}
 .contact-form h3{margin-bottom:8px}
 .contact-form > p{color:var(--muted);font-size:14px;margin-bottom:28px}
 .form-row{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
@@ -486,8 +490,8 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
     </div>
     <div class="right">
       <div class="lang">
-        <a href="./" class="{% if lang == 'ru' %}active{% endif %}">RU</a>
-        <a href="uz.html" class="{% if lang == 'uz' %}active{% endif %}">UZ</a>
+        <a href="./" class="{% if lang == 'uz' %}active{% endif %}">UZ</a>
+        <a href="ru.html" class="{% if lang == 'ru' %}active{% endif %}">RU</a>
         <a href="en.html" class="{% if lang == 'en' %}active{% endif %}">EN</a>
       </div>
     </div>
@@ -931,6 +935,8 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
         <h3>{{ site.contact.form_title }}</h3>
         <p>{{ site.contact.form_sub }}</p>
 
+        <div class="calc-note" id="calc-note" hidden>{{ ui.form.calc_added }}</div>
+
         <div class="form-row">
           <label>{{ ui.form.interest }}</label>
           <div class="form-chips">
@@ -1098,7 +1104,8 @@ function updateCalc(){
   document.getElementById('r-size').textContent  = size;
   const cta = document.getElementById('calc-cta');
   if(cta){
-    cta.onclick = ()=>{
+    cta.onclick = (e)=>{
+      e.preventDefault();
       const chips = document.querySelectorAll('.form-chips .chip');
       chips.forEach(c=>{
         c.classList.toggle('active', c.textContent.trim() === type);
@@ -1109,6 +1116,14 @@ function updateCalc(){
       if(ta) ta.value = `${T.c_type}: ${type}\n${T.c_print}: ${print}\n${T.c_qty}: ${fmt(qty)} ${T.c_pcs}\n${T.c_size}: ${size}`;
       const qtyInput = document.querySelector('input[name="Quantity"]');
       if(qtyInput) qtyInput.value = fmt(qty);
+      // Visible confirmation: show note, scroll, flash the form, focus name
+      const note = document.getElementById('calc-note');
+      if(note) note.hidden = false;
+      const contact = document.getElementById('contact');
+      if(contact) contact.scrollIntoView({behavior:'smooth'});
+      const form = document.querySelector('.contact-form');
+      if(form){ form.classList.remove('flash'); void form.offsetWidth; form.classList.add('flash'); }
+      setTimeout(()=>{ const n=document.querySelector('input[name="Name"]'); if(n) n.focus({preventScroll:true}); }, 700);
     };
   }
 }

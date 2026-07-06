@@ -60,7 +60,8 @@
     "comment": "Izoh",
     "comment_ph": "Vazifani tasvirlang: o'lcham, bosma, maket mavjudligi...",
     "policy_before": "Tugmani bosib, siz ",
-    "policy_link": "ma'lumotlarni qayta ishlash siyosatiga rozilik bildirasiz"
+    "policy_link": "ma'lumotlarni qayta ishlash siyosatiga rozilik bildirasiz",
+    "calc_added": "✓ Kalkulyator konfiguratsiyasi so'rovga qo'shildi — quyida kontaktlarni to'ldiring, biz hisob-kitobni yuboramiz."
   },
   "contact": {
     "phones": "Telefonlar",
