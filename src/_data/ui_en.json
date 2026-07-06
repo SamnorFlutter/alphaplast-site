@@ -86,6 +86,7 @@
     "c_qty": "Quantity",
     "c_size": "Size",
     "c_pcs": "pcs",
+    "to_top": "Back to top",
     "locale": "en-US"
   }
 }
