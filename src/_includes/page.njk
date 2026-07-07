@@ -135,15 +135,15 @@ h3{font-size:clamp(22px,2.2vw,28px);font-weight:600}
 
 /* === HEADER === */
 .header{position:sticky;top:0;z-index:50;background:rgba(244,241,234,.85);backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid var(--line-2)}
-.header .container{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.header .container{display:flex;align-items:center;justify-content:space-between;height:78px;gap:18px}
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-.02em}
 .logo-mark{width:38px;height:38px;border-radius:12px;background:var(--ink);display:grid;place-items:center;color:var(--accent);font-weight:800;font-size:18px;letter-spacing:-.04em;position:relative;overflow:hidden}
 .logo-mark::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(225,30,30,.35),transparent 60%)}
-.nav{display:flex;gap:32px}
-.nav a{font-weight:500;font-size:15px;color:var(--ink);opacity:.78;transition:opacity .2s,color .2s;position:relative}
+.nav{display:flex;gap:22px}
+.nav a{font-weight:500;font-size:14.5px;color:var(--ink);opacity:.78;transition:opacity .2s,color .2s;position:relative;white-space:nowrap}
 .nav a:hover{opacity:1;color:var(--accent)}
 .header-cta{display:flex;align-items:center;gap:14px}
-.header-phone{font-weight:700;font-size:15px;color:var(--ink)}
+.header-phone{font-weight:700;font-size:15px;color:var(--ink);white-space:nowrap}
 .burger{display:none;flex-direction:column;gap:5px;width:30px;height:30px;justify-content:center;align-items:flex-end}
 .burger span{width:24px;height:2px;background:var(--ink);border-radius:2px}
 .burger span:nth-child(2){width:18px}
@@ -441,6 +441,12 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
 .footer-bottom a:hover{color:#fff}
 
 /* ============== RESPONSIVE ============== */
+@media (max-width: 1240px){
+  .nav{gap:16px}
+  .nav a{font-size:13.5px}
+  .header .container{gap:14px}
+  .header-phone{display:none}
+}
 @media (max-width: 1024px){
   .hero .container{grid-template-columns:1fr;gap:40px}
   .hero-visual{aspect-ratio:1.2/1;max-width:520px;margin:0 auto}
