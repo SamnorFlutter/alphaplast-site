@@ -1344,20 +1344,49 @@ if(leadForm){
 window.Tawk_API = window.Tawk_API || {};
 Tawk_API.onLoad = function(){ if(Tawk_API.hideWidget) Tawk_API.hideWidget(); };
 Tawk_API.onChatMinimized = function(){ if(Tawk_API.hideWidget) Tawk_API.hideWidget(); };
-/* Уведомление в Telegram-бот, когда посетитель пишет в онлайн-чат */
-var tawkNotified = false;
-Tawk_API.onChatMessageVisitor = function(message){
-  if(tawkNotified) return;
-  tawkNotified = true;
-  var t = (typeof message === 'string') ? message : (message && (message.message || message.text) || '');
-  var text = '💬 Новый чат на сайте Alpha Plast\n\n📝 Сообщение: ' + (t || '(без текста)') + '\n\n↩️ Ответить: приложение Tawk.to или dashboard.tawk.to';
+
+/* Уведомление в Telegram-бот о сообщениях из онлайн-чата (все сценарии) */
+function tawkTG(text){
   fetch('https://api.telegram.org/bot8837051167:AAHl-I-7kRr2deWKD_4Y4YkQg3SlxoTp24c/sendMessage', {
     method:'POST',
     headers:{'Content-Type':'application/x-www-form-urlencoded'},
     body:'chat_id=1234571697&disable_web_page_preview=true&text=' + encodeURIComponent(text)
   }).catch(function(){});
+}
+function tawkFmt(data){
+  if(!data) return '';
+  if(typeof data === 'string') return data;
+  if(Array.isArray(data)){
+    return data.map(function(f){
+      var k=(f&&(f.label||f.name||f.key))||''; var v=(f&&(f.answer||f.value||f.text))||'';
+      return (k?k+': ':'')+v;
+    }).join('\n');
+  }
+  var out=[];
+  if(data.name) out.push('👤 '+data.name);
+  if(data.email) out.push('✉️ '+data.email);
+  if(data.phone) out.push('📞 '+data.phone);
+  if(data.message) out.push('📝 '+data.message);
+  if(data.text) out.push('📝 '+data.text);
+  if(out.length) return out.join('\n');
+  try { return JSON.stringify(data); } catch(e){ return ''; }
+}
+/* 1) Живой чат (оператор онлайн) — пинг на первое сообщение диалога */
+var tawkNotified = false;
+Tawk_API.onChatMessageVisitor = function(message){
+  if(tawkNotified) return;
+  tawkNotified = true;
+  tawkTG('💬 Новый чат на сайте Alpha Plast\n\n📝 ' + (tawkFmt(message) || '(без текста)') + '\n\n↩️ Ответить: приложение Tawk.to / dashboard.tawk.to');
 };
 Tawk_API.onChatEnded = function(){ tawkNotified = false; };
+/* 2) Офлайн-сообщение (никто не онлайн) */
+Tawk_API.onOfflineSubmit = function(data){
+  tawkTG('📩 Офлайн-сообщение с сайта Alpha Plast (чат)\n\n' + (tawkFmt(data) || '(без данных)') + '\n\n↩️ Ответить: dashboard.tawk.to или по контактам клиента');
+};
+/* 3) Пречат-форма (имя/вопрос перед чатом) */
+Tawk_API.onPrechatSubmit = function(data){
+  tawkTG('📝 Пречат-форма на сайте Alpha Plast\n\n' + (tawkFmt(data) || '(без данных)') + '\n\n↩️ dashboard.tawk.to');
+};
 </script>
 <script src="{{ cfg.chat_src }}" async></script>
 {%- endif %}
