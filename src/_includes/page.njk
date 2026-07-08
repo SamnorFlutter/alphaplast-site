@@ -1371,14 +1371,10 @@ function tawkFmt(data){
   if(out.length) return out.join('\n');
   try { return JSON.stringify(data); } catch(e){ return ''; }
 }
-/* 1) Живой чат (оператор онлайн) — пинг на первое сообщение диалога */
-var tawkNotified = false;
+/* 1) Живой чат (оператор онлайн) — пинг на каждое сообщение клиента */
 Tawk_API.onChatMessageVisitor = function(message){
-  if(tawkNotified) return;
-  tawkNotified = true;
-  tawkTG('💬 Новый чат на сайте Alpha Plast\n\n📝 ' + (tawkFmt(message) || '(без текста)') + '\n\n↩️ Ответить: приложение Tawk.to / dashboard.tawk.to');
+  tawkTG('💬 Клиент в онлайн-чате (Alpha Plast):\n' + (tawkFmt(message) || '(без текста)'));
 };
-Tawk_API.onChatEnded = function(){ tawkNotified = false; };
 /* 2) Офлайн-сообщение (никто не онлайн) */
 Tawk_API.onOfflineSubmit = function(data){
   tawkTG('📩 Офлайн-сообщение с сайта Alpha Plast (чат)\n\n' + (tawkFmt(data) || '(без данных)') + '\n\n↩️ Ответить: dashboard.tawk.to или по контактам клиента');
