@@ -1344,6 +1344,20 @@ if(leadForm){
 window.Tawk_API = window.Tawk_API || {};
 Tawk_API.onLoad = function(){ if(Tawk_API.hideWidget) Tawk_API.hideWidget(); };
 Tawk_API.onChatMinimized = function(){ if(Tawk_API.hideWidget) Tawk_API.hideWidget(); };
+/* Уведомление в Telegram-бот, когда посетитель пишет в онлайн-чат */
+var tawkNotified = false;
+Tawk_API.onChatMessageVisitor = function(message){
+  if(tawkNotified) return;
+  tawkNotified = true;
+  var t = (typeof message === 'string') ? message : (message && (message.message || message.text) || '');
+  var text = '💬 Новый чат на сайте Alpha Plast\n\n📝 Сообщение: ' + (t || '(без текста)') + '\n\n↩️ Ответить: приложение Tawk.to или dashboard.tawk.to';
+  fetch('https://api.telegram.org/bot8837051167:AAHl-I-7kRr2deWKD_4Y4YkQg3SlxoTp24c/sendMessage', {
+    method:'POST',
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body:'chat_id=1234571697&disable_web_page_preview=true&text=' + encodeURIComponent(text)
+  }).catch(function(){});
+};
+Tawk_API.onChatEnded = function(){ tawkNotified = false; };
 </script>
 <script src="{{ cfg.chat_src }}" async></script>
 {%- endif %}
