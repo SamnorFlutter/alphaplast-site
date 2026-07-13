@@ -74,7 +74,10 @@
     "company": "Company",
     "contacts": "Contacts",
     "privacy": "Privacy policy",
-    "offer": "Public offer"
+    "offer": "Public offer",
+    "cta_heading": "Have questions?",
+    "cta_text": "Message us in the chat right now or leave a request — we'll reply during working hours.",
+    "cta_button": "Message us"
   },
   "js": {
     "sending": "Sending…",

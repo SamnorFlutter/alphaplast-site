@@ -74,7 +74,10 @@
     "company": "Kompaniya",
     "contacts": "Kontaktlar",
     "privacy": "Maxfiylik siyosati",
-    "offer": "Ommaviy oferta"
+    "offer": "Ommaviy oferta",
+    "cta_heading": "Savollaringiz bormi?",
+    "cta_text": "Hoziroq chatga yozing yoki so'rov qoldiring — ish vaqtida javob beramiz.",
+    "cta_button": "Yozish"
   },
   "js": {
     "sending": "Yuborilmoqda…",

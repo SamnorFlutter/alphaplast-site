@@ -449,14 +449,30 @@ textarea.form-control{resize:vertical;min-height:110px;font-family:var(--font-te
 
 /* === FOOTER === */
 footer{background:var(--ink);color:#fff;padding:80px 0 30px}
-.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
-.footer-brand .logo{color:#fff;margin-bottom:18px}
-.footer-brand .logo-mark{background:var(--accent);color:#fff}
-.footer-brand p{color:rgba(255,255,255,.55);font-size:14px;line-height:1.6;max-width:320px}
-.footer-col h5{font-family:var(--font-display);font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:24px;color:#fff}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:12px}
-.footer-col a{color:rgba(255,255,255,.6);font-size:14px;transition:color .2s}
-.footer-col a:hover{color:var(--accent)}
+/* Footer CTA row */
+.footer-cta{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;padding-bottom:40px;margin-bottom:48px;border-bottom:1px solid rgba(255,255,255,.10)}
+.footer-cta h2{color:#fff;font-size:clamp(28px,3vw,42px)}
+.footer-cta-right{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.footer-cta-right p{color:rgba(255,255,255,.6);font-size:15px;max-width:360px;line-height:1.5}
+/* Footer main: Instagram + contacts */
+.footer-main{display:grid;grid-template-columns:1.5fr 1fr;gap:56px;margin-bottom:56px;align-items:start}
+.footer-ig-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:20px}
+.footer-ig-head .eyebrow{color:rgba(255,255,255,.6)}
+.footer-ig-head .eyebrow::before{background:rgba(255,255,255,.4)}
+.footer-ig-head a{color:#fff;font-size:14px;font-weight:600;opacity:.85;white-space:nowrap;transition:color .2s,opacity .2s}
+.footer-ig-head a:hover{color:var(--accent);opacity:1}
+.ig-grid-footer{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
+.ig-grid-footer .instagram-media{min-width:0 !important;width:100% !important;max-width:100% !important;margin:0 !important}
+.footer-contacts{display:flex;flex-direction:column;gap:18px}
+.footer-contacts .logo{align-self:flex-start;margin-bottom:2px}
+.footer-cline{display:flex;flex-direction:column;gap:3px}
+.footer-cline b{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.5);font-weight:600;margin-bottom:4px}
+.footer-cline a,.footer-cline span{color:rgba(255,255,255,.85);font-size:15px;transition:color .2s}
+.footer-cline a:hover{color:var(--accent)}
+.footer-tagline{color:#fff;font-weight:600;font-size:15px;line-height:1.55;margin-top:4px;max-width:320px}
+.footer-socials-bottom{display:flex;gap:12px}
+.footer-socials-bottom a{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.15);display:grid;place-items:center;color:rgba(255,255,255,.7);transition:background .2s,color .2s,border-color .2s}
+.footer-socials-bottom a:hover{background:#fff;color:var(--ink);border-color:#fff}
 .footer-bottom{padding-top:30px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;color:rgba(255,255,255,.4);font-size:13px}
 .footer-bottom a:hover{color:#fff}
 
@@ -481,7 +497,7 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
   .cases-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;height:auto}
   .case.c1{grid-row:auto;aspect-ratio:1/1}
   .case{aspect-ratio:1/1}
-  .footer-top{grid-template-columns:1fr 1fr;gap:40px}
+  .footer-main{grid-template-columns:1fr;gap:44px}
 }
 @media (max-width: 720px){
   section{padding:80px 0}
@@ -500,8 +516,13 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
   .benefits{padding:60px 24px;margin:0 14px}
   .cta-card{padding:50px 28px}
   .container{padding:0 18px}
-  .footer-top{grid-template-columns:1fr}
+  .footer-cta{flex-direction:column;align-items:flex-start;gap:20px}
+  .footer-cta-right{width:100%;justify-content:space-between}
   .cases-grid{grid-template-columns:1fr}
+}
+/* Footer Instagram: stack posts on small screens */
+@media (max-width: 560px){
+  .ig-grid-footer{grid-template-columns:1fr;max-width:360px}
 }
 
 /* Very narrow phones (≤380px): prevent grid blowout / horizontal scroll */
@@ -520,13 +541,6 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
 .map-wrap{margin-top:40px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line-2);box-shadow:var(--shadow-sm)}
 .map-wrap iframe{display:block;width:100%;height:420px;border:0}
 @media(max-width:720px){.map-wrap iframe{height:320px}}
-
-/* Instagram feed (официальные пост-эмбеды) */
-.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start;margin-top:16px}
-.ig-grid .instagram-media{min-width:0 !important;width:100% !important;max-width:100% !important;margin:0 !important;border-radius:var(--radius-sm) !important}
-.ig-cta{margin-top:40px;display:flex;justify-content:center}
-@media(max-width:980px){.ig-grid{grid-template-columns:repeat(2,1fr);gap:18px}}
-@media(max-width:620px){.ig-grid{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}}
 
 /* Floating contact hub (Telegram + онлайн-чат + звонок в одной кнопке) */
 .fab-hub{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:12px}
@@ -929,31 +943,6 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
   </div>
 </section>
 
-<!-- ================== INSTAGRAM ================== -->
-{%- if cfg.instagram_posts and cfg.instagram_posts.length %}
-<section id="instagram" class="ig-section">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="left">
-        <span class="eyebrow">{{ site.instagram.eyebrow }}</span>
-        <h2>{{ site.instagram.heading }}</h2>
-      </div>
-      <p>{{ site.instagram.intro }}</p>
-    </div>
-    <div class="ig-grid reveal">
-      {%- for url in cfg.instagram_posts %}
-      <blockquote class="instagram-media" data-instgrm-permalink="{{ url }}" data-instgrm-version="14">
-        <a href="{{ url }}" target="_blank" rel="noopener">{{ site.instagram.heading }} — Alpha Plast</a>
-      </blockquote>
-      {%- endfor %}
-    </div>
-    <div class="ig-cta reveal">
-      <a href="{{ site.contact.instagram }}" class="btn btn-ghost" target="_blank" rel="noopener">{{ site.instagram.cta }} <span class="arrow">→</span></a>
-    </div>
-  </div>
-</section>
-{%- endif %}
-
 <!-- ================== CTA BIG ================== -->
 <section class="cta-big">
   <div class="container">
@@ -1085,37 +1074,64 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
 <!-- ================== FOOTER ================== -->
 <footer>
   <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="logo" style="background:#fff;padding:16px 22px;border-radius:16px;display:inline-block">
-          <img src="assets/logo-full.png" alt="Alpha Plast" style="height:50px;width:auto;display:block">
-        </div>
-        <p style="margin-top:22px">{{ site.footer.about }}</p>
-      </div>
-      <div class="footer-col">
-        <h5>{{ ui.footer.products }}</h5>
-        <ul>
-          {% for item in site.footer.products %}<li><a href="#products">{{ item }}</a></li>{% endfor %}
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>{{ ui.footer.company }}</h5>
-        <ul>
-          {% for item in site.footer.company %}<li><a href="#about">{{ item }}</a></li>{% endfor %}
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>{{ ui.footer.contacts }}</h5>
-        <ul>
-          <li><a href="tel:{{ site.header.phone_link }}">{{ site.header.phone_display }}</a></li>
-          <li><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
-          <li><a href="#contact">{{ site.contact.address_line2 }}</a></li>
-          <li><a href="{{ site.contact.telegram_channel or site.contact.telegram }}" target="_blank" rel="noopener">Telegram</a></li>
-          <li><a href="{{ site.contact.instagram }}" target="_blank" rel="noopener">Instagram</a></li>
-        </ul>
+    <div class="footer-cta reveal">
+      <h2>{{ ui.footer.cta_heading }}</h2>
+      <div class="footer-cta-right">
+        <p>{{ ui.footer.cta_text }}</p>
+        <button type="button" class="btn btn-accent" id="footer-chat">{{ ui.footer.cta_button }} <span class="arrow">→</span></button>
       </div>
     </div>
+
+    <div class="footer-main reveal">
+      <div class="footer-ig">
+        <div class="footer-ig-head">
+          <span class="eyebrow">{{ site.instagram.eyebrow }}</span>
+          <a href="{{ site.contact.instagram }}" target="_blank" rel="noopener">@alphaplast_uz →</a>
+        </div>
+        <div class="ig-grid-footer" id="instagram">
+          {%- for url in cfg.instagram_posts %}{%- if loop.index0 < 3 %}
+          <blockquote class="instagram-media" data-instgrm-permalink="{{ url }}" data-instgrm-version="14">
+            <a href="{{ url }}" target="_blank" rel="noopener">{{ site.instagram.heading }} — Alpha Plast</a>
+          </blockquote>
+          {%- endif %}{%- endfor %}
+        </div>
+      </div>
+      <div class="footer-contacts">
+        <div class="logo" style="background:#fff;padding:12px 18px;border-radius:14px;display:inline-block">
+          <img src="assets/logo-full.png" alt="Alpha Plast" style="height:40px;width:auto;display:block">
+        </div>
+        <div class="footer-cline">
+          <b>{{ ui.contact.office }}</b>
+          <span>{{ site.contact.address_line1 }}, {{ site.contact.address_line2 }}</span>
+        </div>
+        <div class="footer-cline">
+          <b>{{ ui.contact.phones }}</b>
+          {%- for ph in site.contact.phones %}
+          <a href="tel:{{ ph | replace(' ', '') | replace('-', '') }}">{{ ph }}</a>
+          {%- endfor %}
+        </div>
+        <div class="footer-cline">
+          <b>{{ ui.contact.email }}</b>
+          <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+        </div>
+        <p class="footer-tagline">{{ site.footer.about }}</p>
+      </div>
+    </div>
+
     <div class="footer-bottom">
+      <div class="footer-socials-bottom">
+        <a href="{{ site.contact.telegram }}" target="_blank" rel="noopener" aria-label="Telegram">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.5L2.5 12.5l5 2 2 6 3-4 5 4 4-16z"/></svg>
+        </a>
+        <a href="{{ site.contact.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg>
+        </a>
+        {%- if site.contact.youtube %}
+        <a href="{{ site.contact.youtube }}" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.4-.4-5c-.2-.9-.9-1.6-1.8-1.8C19.2 5 12 5 12 5s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 8.6 1 12 1 12s0 3.4.4 5c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-5 .4-5zM9.75 15.5v-7l6 3.5-6 3.5z"/></svg>
+        </a>
+        {%- endif %}
+      </div>
       <div>{{ site.footer.copyright }}</div>
       <div style="display:flex;gap:24px"><a href="privacy.html">{{ ui.footer.privacy }}</a><a href="oferta.html">{{ ui.footer.offer }}</a></div>
     </div>
@@ -1200,6 +1216,20 @@ if(fabHub && fabMain){
       closeHub();
     });
   }
+}
+
+/* ========== Footer «Написать» → онлайн-чат ========== */
+const footerChat=document.getElementById('footer-chat');
+if(footerChat){
+  footerChat.addEventListener('click',()=>{
+    if(window.Tawk_API && Tawk_API.maximize){
+      if(Tawk_API.showWidget) Tawk_API.showWidget();
+      Tawk_API.maximize();
+    } else {
+      const c=document.getElementById('contact');
+      if(c) c.scrollIntoView({behavior:'smooth'});
+    }
+  });
 }
 
 /* ========== Phone input mask (+998 __ ___ __ __) ========== */
