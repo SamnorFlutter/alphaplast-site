@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "Alpha Plast — Custom printed bags manufacturer in Tashkent",
-    "description": "Polyethylene, paper and non-woven bags with custom logo printing. Own production in Tashkent. Registered trademark, Faxriy Yorliq award."
+    "title": "Polyethylene bags with logo in Tashkent — manufacturer | Alpha Plast",
+    "description": "Manufacturer of polyethylene bags with custom logo printing in Tashkent: t-shirt, LDPE & HDPE, courier, paper and non-woven. Delivery across Uzbekistan — request a quote.",
+    "keywords": "polyethylene bags Tashkent, plastic bags Uzbekistan, custom printed bags, bags with logo, bag manufacturer Tashkent, packaging bags, LDPE bags, HDPE bags"
   },
   "topbar": {
     "email": "info@alphaplast.uz",
@@ -15,10 +16,10 @@
   },
   "hero": {
     "tag": "Now accepting orders for new print runs",
-    "title_line1": "Bags",
-    "title_serif": "with your",
-    "title_accent": "logo",
-    "title_line3": "for business",
+    "title_line1": "Polyethylene",
+    "title_serif": "",
+    "title_accent": "bags",
+    "title_line3": "with your logo",
     "lead": "Own production in Tashkent: polyethylene, paper kraft bags and non-woven (spunbond) bags. Registered trademark, Faxriy Yorliq award from the Tashkent City Khokimiyat.",
     "cta_primary": "Calculate the cost",
     "cta_secondary": "View catalog",
@@ -42,8 +43,8 @@
   },
   "products": {
     "eyebrow": "Product catalog",
-    "heading": "Any packaging format, any volume",
-    "intro": "From 1,000 pcs — full turnkey production. Core bag types and dozens of configurations on request.",
+    "heading": "Polyethylene bags with logo — any format and volume",
+    "intro": "Polyethylene bags (LDPE & HDPE), paper and non-woven — from 1,000 pcs, full turnkey production. Core bag types and dozens of configurations on request.",
     "items": [
       { "img": "assets/product-maika.jpg", "tag": "Polyethylene", "title": "T-shirt bag", "desc": "Polyethylene t-shirt (vest) bag with custom logo printing. A universal format for retail.", "price": "On request", "price_sub": "depends on volume and printing" },
       { "img": "assets/product-02.jpg", "tag": "Delivery", "title": "Courier bag", "desc": "Courier bag for delivery and shipping services, with logo printing.", "price": "On request", "price_sub": "depends on volume and printing" },
@@ -97,9 +98,9 @@
   },
   "about": {
     "eyebrow": "About us",
-    "heading": "Next-generation manufacturing",
+    "heading": "Polyethylene bag manufacturer in Tashkent",
     "video_url": "https://www.youtube.com/watch?v=H0NhxhbwdpQ",
-    "text1": "“ALPHA PLAST GROUP FACTORY” LLC is a next-generation manufacturing company in Tashkent. Since 2018 we have produced over 20 million bags for brands of every scale — from local boutiques to international corporations.",
+    "text1": "“ALPHA PLAST GROUP FACTORY” LLC is a next-generation polyethylene bag and packaging manufacturer in Tashkent. Since 2018 we have produced over 20 million bags for brands of every scale — from local boutiques to international corporations.",
     "text2": "Our mission is to make quality branded packaging for businesses of any size. The “Alpha plast” trademark is officially registered with the Ministry of Justice of Uzbekistan, and in 2025 the company was awarded the Faxriy Yorliq by the Tashkent City Khokimiyat.",
     "stats": [
       { "value": "20", "plus": "M+", "label": "Bags produced" },
@@ -157,7 +158,7 @@
     "form_sub": "We'll prepare a quote with terms for your volume"
   },
   "footer": {
-    "about": "Manufacturer of custom logo-printed bags and packaging in Tashkent. Full cycle — from design to delivery across Uzbekistan.",
+    "about": "Manufacturer of polyethylene bags and packaging with custom logo printing in Tashkent: LDPE & HDPE, t-shirt, courier, paper and non-woven. Order with delivery across Uzbekistan.",
     "products": ["T-shirt bag", "Loop handle", "Paper kraft", "Non-woven bags", "Zip-lock"],
     "company": ["About", "How we work", "Cases", "Certificates", "Careers"],
     "copyright": "© 2026 “ALPHA PLAST GROUP FACTORY” LLC. All rights reserved."
