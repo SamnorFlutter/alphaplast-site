@@ -142,6 +142,12 @@
     "text": "So'rov qoldiring — menejer tirajingiz uchun aniq narx va muddat bilan taklif yuboradi.",
     "button": "Taklif olish"
   },
+  "instagram": {
+    "eyebrow": "Instagram",
+    "heading": "Biz Instagramda",
+    "intro": "So'nggi ishlar va mahsulot namunalari. Yangi tirajlarni ko'rish uchun @alphaplast_uz'ga obuna bo'ling.",
+    "cta": "Profilni ochish"
+  },
   "contact": {
     "eyebrow": "Kontaktlar",
     "heading": "Biz bilan bog'laning",

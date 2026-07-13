@@ -142,6 +142,12 @@
     "text": "Leave a request — a manager will send a quote with the exact price and lead time for your volume.",
     "button": "Get a quote"
   },
+  "instagram": {
+    "eyebrow": "Instagram",
+    "heading": "We're on Instagram",
+    "intro": "Latest work and product samples. Follow @alphaplast_uz to see new print runs.",
+    "cta": "Open profile"
+  },
   "contact": {
     "eyebrow": "Contacts",
     "heading": "Get in touch",
