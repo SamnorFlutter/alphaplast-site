@@ -455,15 +455,24 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
 .footer-cta-right{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
 .footer-cta-right p{color:rgba(255,255,255,.6);font-size:15px;max-width:360px;line-height:1.5}
 /* Footer main: Instagram + contacts */
-.footer-main{display:grid;grid-template-columns:1.5fr 1fr;gap:56px;margin-bottom:56px;align-items:start}
-.footer-ig-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:20px}
-.footer-ig-head .eyebrow{color:rgba(255,255,255,.6)}
-.footer-ig-head .eyebrow::before{background:rgba(255,255,255,.4)}
-.footer-ig-head a{color:#fff;font-size:14px;font-weight:600;opacity:.85;white-space:nowrap;transition:color .2s,opacity .2s}
-.footer-ig-head a:hover{color:var(--accent);opacity:1}
-.ig-grid-footer{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;align-items:start}
-.ig-crop{overflow:hidden;border-radius:14px;background:#fff;box-shadow:0 12px 30px -18px rgba(0,0,0,.5)}
-.ig-crop .instagram-media{min-width:0 !important;width:100% !important;max-width:100% !important;margin:0 !important;border:0 !important;border-radius:0 !important;box-shadow:none !important}
+.footer-main{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:56px;margin-bottom:56px;align-items:start}
+.footer-ig{min-width:0}
+.ig-profile{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.ig-avatar{flex-shrink:0;width:54px;height:54px;border-radius:50%;overflow:hidden;background:#fff;display:grid;place-items:center;border:2px solid rgba(255,255,255,.15)}
+.ig-avatar img{width:78%;height:78%;object-fit:contain}
+.ig-profile-info{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.ig-name{color:#fff;font-weight:700;font-size:16px;font-family:var(--font-display);line-height:1.15;transition:color .2s}
+.ig-name:hover{color:var(--accent)}
+.ig-handle{color:rgba(255,255,255,.55);font-size:13px}
+.ig-stats{display:flex;gap:16px;margin-top:6px;flex-wrap:wrap}
+.ig-stats span{color:rgba(255,255,255,.6);font-size:12px}
+.ig-stats b{color:#fff;font-weight:700;font-size:13px}
+.ig-follow{flex-shrink:0;display:inline-flex;align-items:center;gap:7px;background:#0095F6;color:#fff;font-weight:600;font-size:13px;padding:9px 16px;border-radius:10px;white-space:nowrap;transition:filter .2s,transform .2s}
+.ig-follow:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.ig-grid-footer{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.ig-crop{overflow:hidden;border-radius:14px;background:#fff;box-shadow:0 12px 30px -18px rgba(0,0,0,.5);min-width:0}
+.ig-crop .instagram-media{min-width:0 !important;width:100% !important;max-width:100% !important;margin:0 !important;border:0 !important;border-radius:0 !important;box-shadow:none !important;transform:translateY(-56px)}
+.ig-crop iframe{min-width:0 !important;width:100% !important;max-width:100% !important}
 .footer-contacts{display:flex;flex-direction:column;gap:18px}
 .footer-contacts .logo{align-self:flex-start;margin-bottom:2px}
 .footer-cline{display:flex;flex-direction:column;gap:3px}
@@ -498,7 +507,7 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
   .cases-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;height:auto}
   .case.c1{grid-row:auto;aspect-ratio:1/1}
   .case{aspect-ratio:1/1}
-  .footer-main{grid-template-columns:1fr;gap:44px}
+  .footer-main{grid-template-columns:minmax(0,1fr);gap:44px}
 }
 @media (max-width: 720px){
   section{padding:80px 0}
@@ -523,7 +532,7 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
 }
 /* Footer Instagram: stack posts on small screens */
 @media (max-width: 560px){
-  .ig-grid-footer{grid-template-columns:1fr;max-width:360px}
+  .ig-grid-footer{grid-template-columns:minmax(0,1fr);max-width:360px}
 }
 
 /* Very narrow phones (≤380px): prevent grid blowout / horizontal scroll */
@@ -1085,9 +1094,25 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
 
     <div class="footer-main reveal">
       <div class="footer-ig">
-        <div class="footer-ig-head">
-          <span class="eyebrow">{{ site.instagram.eyebrow }}</span>
-          <a href="{{ site.contact.instagram }}" target="_blank" rel="noopener">@alphaplast_uz →</a>
+        <div class="ig-profile">
+          <a class="ig-avatar" href="{{ site.contact.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="assets/logo-mark.png" alt="{{ cfg.instagram_profile.name }}">
+          </a>
+          <div class="ig-profile-info">
+            <a class="ig-name" href="{{ site.contact.instagram }}" target="_blank" rel="noopener">{{ cfg.instagram_profile.name }}</a>
+            <span class="ig-handle">@{{ cfg.instagram_profile.handle }}</span>
+            {%- if cfg.instagram_profile.followers %}
+            <div class="ig-stats">
+              <span><b>{{ cfg.instagram_profile.posts }}</b> {{ ui.instagram.posts }}</span>
+              <span><b>{{ cfg.instagram_profile.followers }}</b> {{ ui.instagram.followers }}</span>
+              <span><b>{{ cfg.instagram_profile.following }}</b> {{ ui.instagram.following }}</span>
+            </div>
+            {%- endif %}
+          </div>
+          <a class="ig-follow" href="{{ site.contact.instagram }}" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg>
+            {{ ui.instagram.follow }}
+          </a>
         </div>
         <div class="ig-grid-footer" id="instagram">
           {%- for url in cfg.instagram_posts %}{%- if loop.index0 < 2 %}
@@ -1176,11 +1201,11 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   let loaded=false;
   // Срезаем нижний бар эмбеда (лайки/комментарии/«ещё в Instagram») — он внутри iframe,
   // поэтому прячем через overflow:hidden, уменьшая высоту контейнера.
-  const CHROME=170;
+  const HEADER=56, CHROME=170;
   function cropIG(){
     document.querySelectorAll('.ig-crop').forEach(function(w){
       const f=w.querySelector('iframe');
-      if(f && f.offsetHeight>240){ w.style.height=(f.offsetHeight-CHROME)+'px'; }
+      if(f && f.offsetHeight>260){ w.style.height=(f.offsetHeight-HEADER-CHROME)+'px'; }
     });
   }
   function scheduleCrop(){ [400,1200,2500,4500,7000].forEach(function(t){ setTimeout(cropIG,t); }); }

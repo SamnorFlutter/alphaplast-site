@@ -79,6 +79,12 @@
     "cta_text": "Hoziroq chatga yozing yoki so'rov qoldiring — ish vaqtida javob beramiz.",
     "cta_button": "Yozish"
   },
+  "instagram": {
+    "follow": "Obuna bo'lish",
+    "posts": "post",
+    "followers": "obunachi",
+    "following": "obuna"
+  },
   "js": {
     "sending": "Yuborilmoqda…",
     "sent": "So'rov yuborildi! Menejer tez orada siz bilan bog'lanadi.",

@@ -79,6 +79,12 @@
     "cta_text": "Message us in the chat right now or leave a request — we'll reply during working hours.",
     "cta_button": "Message us"
   },
+  "instagram": {
+    "follow": "Follow",
+    "posts": "posts",
+    "followers": "followers",
+    "following": "following"
+  },
   "js": {
     "sending": "Sending…",
     "sent": "Request sent! Our manager will contact you shortly.",
