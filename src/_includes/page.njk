@@ -461,8 +461,9 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
 .footer-ig-head .eyebrow::before{background:rgba(255,255,255,.4)}
 .footer-ig-head a{color:#fff;font-size:14px;font-weight:600;opacity:.85;white-space:nowrap;transition:color .2s,opacity .2s}
 .footer-ig-head a:hover{color:var(--accent);opacity:1}
-.ig-grid-footer{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
-.ig-grid-footer .instagram-media{min-width:0 !important;width:100% !important;max-width:100% !important;margin:0 !important}
+.ig-grid-footer{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;align-items:start}
+.ig-crop{overflow:hidden;border-radius:14px;background:#fff;box-shadow:0 12px 30px -18px rgba(0,0,0,.5)}
+.ig-crop .instagram-media{min-width:0 !important;width:100% !important;max-width:100% !important;margin:0 !important;border:0 !important;border-radius:0 !important;box-shadow:none !important}
 .footer-contacts{display:flex;flex-direction:column;gap:18px}
 .footer-contacts .logo{align-self:flex-start;margin-bottom:2px}
 .footer-cline{display:flex;flex-direction:column;gap:3px}
@@ -1089,10 +1090,12 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
           <a href="{{ site.contact.instagram }}" target="_blank" rel="noopener">@alphaplast_uz →</a>
         </div>
         <div class="ig-grid-footer" id="instagram">
-          {%- for url in cfg.instagram_posts %}{%- if loop.index0 < 3 %}
-          <blockquote class="instagram-media" data-instgrm-permalink="{{ url }}" data-instgrm-version="14">
-            <a href="{{ url }}" target="_blank" rel="noopener">{{ site.instagram.heading }} — Alpha Plast</a>
-          </blockquote>
+          {%- for url in cfg.instagram_posts %}{%- if loop.index0 < 2 %}
+          <div class="ig-crop">
+            <blockquote class="instagram-media" data-instgrm-permalink="{{ url }}" data-instgrm-version="14">
+              <a href="{{ url }}" target="_blank" rel="noopener">{{ site.instagram.heading }} — Alpha Plast</a>
+            </blockquote>
+          </div>
           {%- endif %}{%- endfor %}
         </div>
       </div>
@@ -1166,19 +1169,32 @@ const io = new IntersectionObserver((entries)=>{
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-/* ========== Instagram embeds — ленивая загрузка ========== */
+/* ========== Instagram embeds — ленивая загрузка + обрезка нижней панели ========== */
 (function(){
   const ig=document.getElementById('instagram');
   if(!ig) return;
   let loaded=false;
+  // Срезаем нижний бар эмбеда (лайки/комментарии/«ещё в Instagram») — он внутри iframe,
+  // поэтому прячем через overflow:hidden, уменьшая высоту контейнера.
+  const CHROME=170;
+  function cropIG(){
+    document.querySelectorAll('.ig-crop').forEach(function(w){
+      const f=w.querySelector('iframe');
+      if(f && f.offsetHeight>240){ w.style.height=(f.offsetHeight-CHROME)+'px'; }
+    });
+  }
+  function scheduleCrop(){ [400,1200,2500,4500,7000].forEach(function(t){ setTimeout(cropIG,t); }); }
   function loadIG(){
     if(loaded) return; loaded=true;
-    if(window.instgrm && window.instgrm.Embeds){ window.instgrm.Embeds.process(); return; }
+    function done(){ if(window.instgrm && window.instgrm.Embeds) window.instgrm.Embeds.process(); scheduleCrop(); }
+    if(window.instgrm && window.instgrm.Embeds){ done(); return; }
     const s=document.createElement('script');
     s.async=true; s.src='https://www.instagram.com/embed.js';
-    s.onload=function(){ if(window.instgrm && window.instgrm.Embeds) window.instgrm.Embeds.process(); };
+    s.onload=done;
     document.body.appendChild(s);
   }
+  let ct;
+  window.addEventListener('resize',function(){ clearTimeout(ct); ct=setTimeout(cropIG,200); });
   if('IntersectionObserver' in window){
     const igo=new IntersectionObserver((entries)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ loadIG(); igo.disconnect(); } });
