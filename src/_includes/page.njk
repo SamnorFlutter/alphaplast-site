@@ -229,16 +229,6 @@ h3{font-size:clamp(22px,2.2vw,28px);font-weight:600}
 .stat-strip b .plus{color:var(--accent)}
 .stat-strip span{display:block;font-size:13px;opacity:.65;margin-top:8px}
 
-/* === MARQUEE === */
-.marquee-wrap{padding:80px 0 40px;overflow:hidden}
-.marquee-label{text-align:center;color:var(--muted);font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:30px}
-.marquee{display:flex;gap:60px;animation:slide 30s linear infinite;width:max-content}
-.marquee:hover{animation-play-state:paused}
-.marquee span{font-family:var(--font-display);font-size:36px;font-weight:600;color:var(--ink);opacity:.5;white-space:nowrap;transition:opacity .3s,color .3s}
-.marquee span:hover{opacity:1;color:var(--accent)}
-.marquee .sep{font-size:24px;color:var(--accent);opacity:1}
-@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
 /* === SECTIONS === */
 section{padding:120px 0;position:relative}
 .section-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:60px;flex-wrap:wrap}
@@ -651,15 +641,6 @@ footer{background:var(--ink);color:#fff;padding:80px 0 30px}
     </div>
   </div>
 </section>
-
-<!-- ================== CLIENT MARQUEE ================== -->
-<div class="marquee-wrap">
-  <div class="marquee-label">{{ site.marquee.label }}</div>
-  <div class="marquee">
-    {% for c in site.marquee.clients %}<span>{{ c }}</span><span class="sep">●</span>{% endfor %}
-    {% for c in site.marquee.clients %}<span>{{ c }}</span><span class="sep">●</span>{% endfor %}
-  </div>
-</div>
 
 <!-- ================== PRODUCTS ================== -->
 <section id="products">
